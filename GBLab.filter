@@ -178,7 +178,7 @@ Class Currency
 #----------------------------------------------------
 #	[CUR][Switched]
 #----------------------------------------------------
-Hide # Lowest currencies worth picking up
+Show # Lowest currencies worth picking up
 	Class Currency
     BaseType "Orb of Alteration" "Glassblower's Bauble" "Chromatic Orb" "Perandus Coin" "Orb of Chance"
     SetTextColor 50 170 30
@@ -187,14 +187,14 @@ Hide # Lowest currencies worth picking up
     #PlayAlertSound 14 70
 	SetFontSize 37
 	DisableDropSound
-Hide
+Show
 	Class Currency
     BaseType "Orb of Transmutation" "Blacksmith's Whetstone"
     SetTextColor 50 170 30
     SetBorderColor 255 255 255 0
 	SetFontSize 35
 	DisableDropSound
-Hide 
+Show 
 	Class Currency
     BaseType "Orb of Transmutation" "Orb of Augmentation" "Blacksmith's Whetstone" "Armourer's Scrap" 
     SetTextColor 50 170 30
@@ -1036,48 +1036,48 @@ Show # Special Bases: Vanguard Belt, Marble Amulet, Blue Pearl Amulet
 #----------------------------------------------------
 #	[ACC][Recipes]
 #----------------------------------------------------
-# Show
-	# Class "Amulet" "Ring"
-	# BaseType "Opal Ring" "Steel Ring" "Prismatic Ring" "Marble Amulet" 
-	# SetBackgroundColor 90 90 0
-    # SetBorderColor 255 255 0
-	# SetFontSize 35
-	# DisableDropSound
-# Show # Regal recipe
-	# Class "Amulet" "Ring"
-	# BaseType "Two-Stone Ring" "Opal Ring" "Steel Ring" "Prismatic Ring" "Diamond Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Unset Ring" "Coral Ring" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Onyx Amulet" "Marble Amulet"
-    # ItemLevel > 74
-    # Rarity Rare
-	# Corrupted False
-	# SetBackgroundColor 90 90 0
-    # SetBorderColor 255 255 0
-	# SetFontSize 35
-	# DisableDropSound
-# Show # Chaos Recipe
-	# Class "Amulet" "Ring"
-	# BaseType "Two-Stone Ring" "Opal Ring" "Steel Ring" "Prismatic Ring" "Diamond Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Unset Ring" "Coral Ring" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Onyx Amulet" "Marble Amulet"
-    # ItemLevel > 59
-    # Rarity Rare
-	# Corrupted False
-    # SetBackgroundColor 90 90 0
-    # SetFontSize 34
-	# DisableDropSound
-# Show
-	# Class Belt
-	# BaseType "Stygian Vise" "Vanguard Belt" "Crystal Belt"
-    # ItemLevel > 59
-    # Rarity Rare
-	# SetBackgroundColor 90 90 0
-	# SetBorderColor 255 255 0 0
-	# DisableDropSound
-# Show # Rare Belts # "Heavy Belt" "Rustic Sash"
-	# Class Belt
-	# BaseType "Leather Belt" "Stygian Vise" "Vanguard Belt" "Crystal Belt"
-    # ItemLevel > 59
-    # Rarity Rare
-	# SetBackgroundColor 90 90 0
-	# SetBorderColor 255 255 0 0
-	# DisableDropSound
+Show
+	Class "Amulet" "Ring"
+	BaseType "Opal Ring" "Steel Ring" "Prismatic Ring" "Marble Amulet" 
+	SetBackgroundColor 90 90 0
+    SetBorderColor 255 255 0
+	SetFontSize 35
+	DisableDropSound
+Show # Regal recipe
+	Class "Amulet" "Ring"
+	BaseType "Two-Stone Ring" "Opal Ring" "Steel Ring" "Prismatic Ring" "Diamond Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Unset Ring" "Coral Ring" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Onyx Amulet" "Marble Amulet"
+    ItemLevel > 74
+    Rarity Rare
+	Corrupted False
+	SetBackgroundColor 90 90 0
+    SetBorderColor 255 255 0
+	SetFontSize 35
+	DisableDropSound
+Show # Chaos Recipe
+	Class "Amulet" "Ring"
+	BaseType "Two-Stone Ring" "Opal Ring" "Steel Ring" "Prismatic Ring" "Diamond Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Unset Ring" "Coral Ring" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Onyx Amulet" "Marble Amulet"
+    ItemLevel > 59
+    Rarity Rare
+	Corrupted False
+    SetBackgroundColor 90 90 0
+    SetFontSize 34
+	DisableDropSound
+Show
+	Class Belt
+	BaseType "Stygian Vise" "Vanguard Belt" "Crystal Belt"
+    ItemLevel > 59
+    Rarity Rare
+	SetBackgroundColor 90 90 0
+	SetBorderColor 255 255 0 0
+	DisableDropSound
+Show # Rare Belts # "Heavy Belt" "Rustic Sash"
+	Class Belt
+	BaseType "Leather Belt" "Stygian Vise" "Vanguard Belt" "Crystal Belt"
+    ItemLevel > 59
+    Rarity Rare
+	SetBackgroundColor 90 90 0
+	SetBorderColor 255 255 0 0
+	DisableDropSound
 # Show
 	# Class Ring Amulet
 	# Rarity Rare
@@ -1408,16 +1408,16 @@ Show # Bone helmet
 #----------------------------------------------------
 #	[RAR][Weapons]
 #----------------------------------------------------
-# Show # Foils
-	# #Class "Thrusting One Hand Sword"
-	# Class "One Hand Sword"
-	# Rarity Rare
-	# BaseType "Jewelled Foil" "Spiraled Foil" "Corsair Sword"
-	# ItemLevel >= 75
-	# SetBackgroundColor 120 60 0
-	# SetBorderColor 0 0 0 0
-	# SetFontSize 37
-	# DisableDropSound
+Show # Foils
+	#Class "Thrusting One Hand Sword"
+	Class "One Hand Sword"
+	Rarity Rare
+	BaseType "Jewelled Foil" "Spiraled Foil" "Corsair Sword"
+	ItemLevel >= 75
+	SetBackgroundColor 120 60 0
+	SetBorderColor 0 0 0 0
+	SetFontSize 37
+	DisableDropSound
 # Show # Claws # "Eye Gouger" "Gemini Claw"
 	# Class Claws
 	# Rarity Rare
