@@ -393,7 +393,8 @@ Show # Lab stuff
 	DisableDropSound
 Show # Best Prophecies
 	Class Currency
-	BaseType "The Queen's Sacrifice" "Fated Connections" "Trash to Treasure"
+	BaseType "Prophecy"
+	Prophecy "The Queen's Sacrifice" "Fated Connections" "Trash to Treasure"
     SetTextColor 0 180 0
     SetBackgroundColor 230 255 230
     SetBorderColor 0 180 0
@@ -550,7 +551,7 @@ Show # Most valuable divination cards: 30c+
 	DisableDropSound
 Show # Valuable divination cards: 10-30c
     Class Divination
-	BaseType "The Offering" "The Endless Darkness" "The Aritst" "The Enlightened" "The Brittle Emperor" "The Saint's Treasure" "Mawr Blaidd" "The Risk" "The Celestial Stone" "The Ethereal" "A Dab of Ink" "The Queen" "The Mayor" 
+	BaseType "The Offering" "The Endless Darkness" "The Artist" "The Enlightened" "The Brittle Emperor" "The Saint's Treasure" "Mawr Blaidd" "The Risk" "The Celestial Stone" "The Ethereal" "A Dab of Ink" "The Queen" "The Mayor" 
 	SetTextColor 255 255 255
 	SetBackgroundColor 200 120 0
     SetBorderColor 255 255 255 0
@@ -985,7 +986,7 @@ Show # Caster Weapon bases, ilvl80 for extra phys damage as element
 Show # ilvl84+ Eclipse Staff
 	ShaperItem True
 	ItemLevel >= 84
-	Class Staff
+	Class Staves
 	BaseType "Eclipse Staff"
 	SetBackgroundColor 50 0 65
 	SetTextColor 255 255 255
@@ -1016,7 +1017,7 @@ Show # ilvl84+ foils
 Show # ilvl80+ Eclipse Staff
 	ShaperItem True
 	ItemLevel >= 80
-	Class Staff
+	Class Staves
 	BaseType "Eclipse Staff"
 	SetBackgroundColor 50 0 65
 	SetTextColor 240 160 255
