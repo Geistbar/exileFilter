@@ -233,22 +233,22 @@ Show # For vendoring into wisdom scrolls
     BaseType "Orb of Transmutation" "Blacksmith's Whetstone"
     SetTextColor 50 170 30
     SetBorderColor 255 255 255 0
-	SetBackgroundColor 15 50 15
-	SetFontSize 35
+	SetBackgroundColor 10 35 10
+	SetFontSize 33
 	DisableDropSound
 Show # Small currencies that I want a stockpile of before hiding
 	Class Currency
     BaseType "Orb of Transmutation" "Orb of Augmentation" "Blacksmith's Whetstone" "Armourer's Scrap" 
     SetTextColor 50 170 30
     SetBorderColor 255 255 255 0
-	SetBackgroundColor 15 50 15
-	SetFontSize 35
+	SetBackgroundColor 10 35 10
+	SetFontSize 33
 	DisableDropSound
 Hide # Scrolls -- Hide after getting portal gem UnHide [1]
     Class Currency
 	BaseType "Scroll of Wisdom" 
     SetTextColor 50 170 30 150
-	SetBackgroundColor 15 50 15
+	SetBackgroundColor 10 35 10
 	SetFontSize 32
 	#SetFontSize 37
 	DisableDropSound
@@ -256,7 +256,7 @@ Hide # Scrolls -- Hide after getting portal gem UnHide [1]
     Class Currency
 	BaseType "Portal Scroll"
     SetTextColor 50 170 30 150
-	SetBackgroundColor 15 50 15
+	SetBackgroundColor 10 35 10
 	SetFontSize 32
 	#SetFontSize 37
 	DisableDropSound
