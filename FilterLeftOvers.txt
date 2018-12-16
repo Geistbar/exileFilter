@@ -1,0 +1,307 @@
+#----------------------------------------------------
+#	[RAR][ES]
+#----------------------------------------------------
+# Show # ES chests
+	# Class "Body Armour"
+	# Rarity Rare
+	# BaseType "Vaal Regalia"
+	# SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 38
+	# DisableDropSound
+# Show # ES Gloves
+	# Class Gloves
+	# Rarity Rare
+	# BaseType "Fingerless Silk Gloves"
+	# SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 38
+	# DisableDropSound
+# Show # ES gloves, boots, helms, and shield
+	# Rarity Rare
+	# BaseType "Sorcerer Boots" "Sorcerer Gloves" "Hubris Circlet" "Titanium Spirit Shield" "Fingerless Silk Gloves"
+	# SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 38
+	# DisableDropSound
+# Show # ES Shields
+	# Class Shield
+    # Rarity Rare
+    # BaseType "Fossilised Spirit Shield" "Titanium Spirit Shield"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+#----------------------------------------------------
+#	[RAR][Armor]
+#----------------------------------------------------
+# Show # AR Gloves
+	# Class Gloves
+    # Rarity Rare
+    # BaseType "Titan Gauntlets"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # AR Boots
+	# Class Boots
+    # Rarity Rare
+    # BaseType "Titan Greaves"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # AR Helmets
+	# Class Helmet
+    # Rarity Rare
+    # BaseType "Eternal Burgonet" "Royal Burgonet"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # AR Chests; "Glorious Plate"
+	# Class "Body Armour"
+    # Rarity Rare
+    # BaseType "Astral Plate"
+    # SetBackgroundColor 70 35 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # AR Shields
+	# Class Shield
+    # Rarity Rare
+    # BaseType "Pinnacle Tower Shield" "Colossal Tower Shield"
+    # SetBackgroundColor 47 23 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+#----------------------------------------------------
+#	[RAR][Evasion]
+#----------------------------------------------------
+# Show # EV Gloves
+	# Class Gloves
+    # Rarity Rare
+    # BaseType "Slink Gloves"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # EV Boots
+	# Class Boots
+    # Rarity Rare
+    # BaseType "Slink Boots"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # EV Helmets
+	# Class Helmet
+    # Rarity Rare
+    # BaseType "Lion Pelt"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # EV Shields
+	# Class Shield
+    # Rarity Rare
+    # BaseType "Imperial Buckler" "Crusader Buckler" "Lacquered Buckler"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # EV Chests
+	# Class "Body Armour"
+    # Rarity Rare
+    # BaseType "Assassin's Garb" "Zodiac Leather"
+    # SetBackgroundColor 70 35 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+#----------------------------------------------------
+#	[RAR][Hybrid-ES-EV]
+#----------------------------------------------------
+# Show # ES-EV Boots
+	# Class Boots
+    # Rarity Rare
+    # BaseType "Assassin's Boots"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # ES-EV Gloves
+	# Class Gloves
+    # Rarity Rare
+    # BaseType "Murder Mitts"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # ES-EV Helmets
+	# Class Helmet
+    # Rarity Rare
+    # BaseType "Deicide Mask"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # ES-EV Chests
+	# Class "Body Armour"
+    # Rarity Rare
+    # BaseType "Sacrificial Garb" "Carnal Armour"
+    # SetBackgroundColor 70 35 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # ES-EV Shields
+	# Class Shield
+    # Rarity Rare
+    # BaseType "Supreme Spiked Shield"
+    # SetBackgroundColor 70 35 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+#----------------------------------------------------
+#	[RAR][Hybrid-ES-AR]
+#----------------------------------------------------
+# Show # ES-AR Boots
+	# Class Boots
+    # Rarity Rare
+    # BaseType "Crusader Boots"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # ES-AR Gloves
+	# Class Gloves
+    # Rarity Rare
+    # BaseType "Crusader Gloves"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # ES-AR Helmets
+	# Class Helmet
+    # Rarity Rare
+    # BaseType "Praetor Crown"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # ES-AR Chests
+	# Class "Body Armour"
+    # Rarity Rare
+    # BaseType "Sacrificial Garb" "Saintly Chainmail"
+    # SetBackgroundColor 70 35 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # ES-AR Shields
+	# Class Shield
+    # Rarity Rare
+    # BaseType "Archon Kite Shield" "Champion Kite Shield" "Branded Kite Shield"
+    # SetBackgroundColor 70 35 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+#----------------------------------------------------
+#	[RAR][Hybrid-EV-AR]
+#----------------------------------------------------
+# Show # EV-AR Boots
+	# Class Boots
+    # Rarity Rare
+    # BaseType "Dragonscale Boots"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # EV-AR Gloves
+	# Class Gloves
+    # Rarity Rare
+    # BaseType "Dragonscale Gauntlets"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # EV-AR Helmets
+	# Class Helmet
+    # Rarity Rare
+    # BaseType "Nightmare Bascinet" "Pig-Faced Bascinet"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # EV-AR Chests
+	# Class "Body Armour"
+    # Rarity Rare
+    # BaseType "Sacrificial Garb" "Triumphant Lamellar" "General's Brigandine"
+    # SetBackgroundColor 70 35 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # EV-AR Shields
+	# Class Shield
+    # Rarity Rare
+    # BaseType "Cardinal Round Shield"
+    # SetBackgroundColor 70 35 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+#----------------------------------------------------
+#	[RAR][Weapons]
+#----------------------------------------------------
+# Show # Foils
+	# #Class "Thrusting One Hand Sword"
+	# Class "One Hand Sword"
+	# Rarity Rare
+	# BaseType "Jewelled Foil" "Spiraled Foil" "Corsair Sword"
+	# ItemLevel >= 75
+	# SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # Claws # "Eye Gouger" "Gemini Claw"
+	# Class Claws
+	# Rarity Rare
+	# BaseType "Imperial Claw" 
+	# #ItemLevel >= 75
+	# SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # Bows
+	# Class Bow
+    # Rarity Rare
+    # BaseType "Harbinger Bow"
+	# ItemLevel >= 80
+    # SetBackgroundColor 47 23 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # Best attack daggers # "Imperial Skean" "Ezomyte Dagger"
+	# Class Dagger
+    # Rarity Rare
+    # BaseType "Ambusher"
+	# #ItemLevel >= 75
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # Wands
+	# Class Wand
+    # Rarity Rare
+    # BaseType "Imbued Wand"
+	# #ItemLevel >= 80
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # Axe
+	# Class Axe
+	# Rarity Rare
+	# BaseType "Siege Axe" "Vaal Axe"
+	# ItemLevel >= 83
+	# SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound

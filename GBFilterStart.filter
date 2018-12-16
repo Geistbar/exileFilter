@@ -85,9 +85,9 @@ Show # Mirror, special sound
     SetTextColor 0 180 0
     SetBackgroundColor 255 255 255
     SetBorderColor 0 180 0
-    SetFontSize 55
+    SetFontSize 45
     PlayAlertSound ShMirror 300
-	MinimapIcon 0 Red Diamond
+	MinimapIcon 0 Red Star
 	DisableDropSound
 Show # Exalts, special sound
 	Class "Currency"
@@ -95,47 +95,47 @@ Show # Exalts, special sound
     SetTextColor 0 180 0
     SetBackgroundColor 255 255 255
     SetBorderColor 0 180 0
-    SetFontSize 55
+    SetFontSize 45
     PlayAlertSound ShExalted 300
-	MinimapIcon 0 Red Diamond
+	MinimapIcon 0 Red Star
 	DisableDropSound
 Show # Divine Orb, special sound
 	Class Currency
     BaseType "Divine Orb"
     SetTextColor 0 180 0
     SetBackgroundColor 200 200 200
-    SetFontSize 40
+    SetFontSize 43
     PlayAlertSound ShDivine 200
-	MinimapIcon 0 Red Diamond
+	MinimapIcon 0 Red Star
 	DisableDropSound
 Show # Other super currency
 	Class "Currency"
-    BaseType "Eternal Orb" "Exalted Orb" "Mirror of Kalandra" "Albino Rhoa Feather" "Blessing of Chayula"
+    BaseType "Eternal Orb" "Exalted Orb" "Mirror of Kalandra" "Albino Rhoa Feather" "Blessing of Chayula" "Mirror Shard"
     SetTextColor 0 180 0
     SetBackgroundColor 255 255 255
     SetBorderColor 0 180 0
-    SetFontSize 55
+    SetFontSize 45
     PlayAlertSound 1 300
-	MinimapIcon 0 Red Diamond
+	MinimapIcon 0 Red Star
 	DisableDropSound
 Show # Worth more than a chaos, less than exalt/divine
-	BaseType "Master Cartographer's Sextant" "Journeyman Cartographer's Sextant" "Apprentice Cartographer's Sextant" "Orb of Annulment"
+	BaseType "Master Cartographer's Sextant" "Journeyman Cartographer's Sextant" "Apprentice Cartographer's Sextant" "Orb of Annulment" "Exalted Shard"
 	SetTextColor 255 255 255
 	SetBackgroundColor 30 130 25
     SetBorderColor 255 255 255
-    SetFontSize 38
+    SetFontSize 42
     PlayAlertSound 2 130
-	MinimapIcon 1 Red Diamond
+	MinimapIcon 0 Red Circle
 	DisableDropSound
 Show # Wide category, catches everything closer to a chaos than to a divine
 	Class Currency
-    BaseType "Regal Orb" "Orb of Regret" "Vaal Orb" "Chaos Orb" "Blessed Orb" "Gemcutter's Prism" "Vaal Orb" "Stacked Deck" "Blessing of Xoph" "Blessing of Tul" "Blessing of Esh" "Blessing of Uul-Netol"
+    BaseType "Regal Orb" "Orb of Regret" "Vaal Orb" "Chaos Orb" "Gemcutter's Prism" "Vaal Orb" "Stacked Deck" "Blessing of Xoph" "Blessing of Tul" "Blessing of Esh" "Blessing of Uul-Netol"
 	SetTextColor 170 210 230
     SetBackgroundColor 30 130 25
     SetBorderColor 170 210 230
-    SetFontSize 38
+    SetFontSize 40
     PlayAlertSound 2 130
-	MinimapIcon 2 Red Diamond
+	MinimapIcon 1 Red Circle
 	DisableDropSound
 Show # Chayula Splinter
 	Class Currency
@@ -143,9 +143,9 @@ Show # Chayula Splinter
     SetTextColor 200 150 255
     SetBackgroundColor 30 130 25
     SetBorderColor 200 150 255
-    SetFontSize 38
+    SetFontSize 40
     PlayAlertSound 2 130
-	MinimapIcon 2 Red Diamond
+	MinimapIcon 1 Red Circle
 	DisableDropSound
 Show # Splinters
 	Class Currency
@@ -153,19 +153,27 @@ Show # Splinters
     SetTextColor 200 150 255
     SetBackgroundColor 30 130 25
 	SetBorderColor 255 255 255 0
-    SetFontSize 37
+    SetFontSize 38
     PlayAlertSound 14 110
-	MinimapIcon 2 Red Diamond
+	MinimapIcon 2 Red Circle
 	DisableDropSound
 Show # Just below the near Chaos category
 	Class Currency
-    BaseType "Cartographer's Chisel" "Orb of Alchemy" "Jeweller's Orb" "Silver Coin" "Orb of Scouring" "Orb of Fusing"
+    BaseType "Cartographer's Chisel" "Orb of Alchemy" "Jeweller's Orb" "Silver Coin" "Orb of Scouring" "Orb of Fusing" "Blessed Orb"
     SetTextColor 170 210 230
     SetBackgroundColor 30 130 25
     SetBorderColor 255 255 255 0
-    SetFontSize 37
+    SetFontSize 39
     PlayAlertSound 14 110
-	MinimapIcon 2 Red Diamond
+	MinimapIcon 2 Red Circle
+	DisableDropSound
+Show
+	Class Currency
+    BaseType "Scroll of Wisdom"
+	StackSize > 9
+    SetTextColor 50 170 30
+	SetBackgroundColor 40 70 40
+	SetFontSize 37
 	DisableDropSound
 #----------------------------------------------------
 #	[CUR][Switched]
@@ -177,14 +185,21 @@ Show # Lowest currencies worth picking up
     #SetBorderColor 50 170 30
 	SetBackgroundColor 40 70 40
     #PlayAlertSound 14 70
-	SetFontSize 35
+	SetFontSize 37
 	DisableDropSound
 Show
+	Class Currency
+    BaseType "Orb of Transmutation" "Blacksmith's Whetstone"
+    SetTextColor 50 170 30
+    SetBorderColor 255 255 255 0
+	SetFontSize 35
+	DisableDropSound
+Show 
 	Class Currency
     BaseType "Orb of Transmutation" "Orb of Augmentation" "Blacksmith's Whetstone" "Armourer's Scrap" 
     SetTextColor 50 170 30
     SetBorderColor 255 255 255 0
-	SetFontSize 25
+	SetFontSize 35
 	DisableDropSound
 Show # Harbinger Stuff
 	Class Currency
@@ -192,40 +207,28 @@ Show # Harbinger Stuff
 	SetTextColor 200 150 255
     SetBackgroundColor 30 130 25
 	SetBorderColor 255 255 255 0
-    SetFontSize 37
+    SetFontSize 38
     PlayAlertSound 14 110
 	DisableDropSound
-# Show # Beastiary
-	# Class Currency
-	# BaseType "Bestiary Orb" "Imprinted Bestiary Orb" "Thaumaturgical Net" "Necromancy Net"
-	# SetTextColor 255 185 80
-    # SetBackgroundColor 30 130 25
-	# SetBorderColor 255 255 255 0
-    # PlayAlertSound 14 50
-	# DisableDropSound
-# Hide # Bestiary nets
-	# Class Currency
-	# BaseType "Simple Rope Net" "Reinforced Rope Net" "Strong Rope Net" "Simple Iron Net" "Reinforced Iron Net" "Strong Iron Net" "Simple Steel Net" "Reinforced Steel Net" "Strong Steel Net"
-	# DisableDropSound
 Show # Incursion Vials
 	Class Currency
     BaseType "Vial"
     SetTextColor 50 170 30
     SetBackgroundColor 40 70 40
     PlayAlertSound 14 70
-	SetFontSize 35
+	SetFontSize 40
 	DisableDropSound
-Show # Scrolls -- Hide after getting portal gem UnHide [1]
+Hide # Scrolls -- Hide after getting portal gem UnHide [1]
     Class Currency
 	BaseType "Scroll of Wisdom" 
     SetTextColor 50 170 30 150
-	SetFontSize 34
+	SetFontSize 37
 	DisableDropSound
-Show # Scrolls -- Hide after getting portal gem UnHide [1]
+Hide # Scrolls -- Hide after getting portal gem UnHide [1]
     Class Currency
 	BaseType "Portal Scroll"
     SetTextColor 50 170 30 150
-	SetFontSize 34
+	SetFontSize 37
 	DisableDropSound
 #----------------------------------------------------
 #	[CUR][Essences]
@@ -236,18 +239,18 @@ Show # T7 essences and corruption only essences
 	SetTextColor 255 255 255
     SetBackgroundColor 130 90 50
 	SetBorderColor 255 255 255
-	SetFontSize 40
+	SetFontSize 42
 	PlayAlertSound 2 200
-	MinimapIcon 0 Green Hexagon
+	MinimapIcon 0 Green Circle
 	DisableDropSound
 Show # T5 and T6 essences
 	Class Currency
 	BaseType "Shrieking Essence" "Screaming Essence"
 	SetTextColor 255 255 255
     SetBackgroundColor 130 90 50
-	SetFontSize 37
+	SetFontSize 40
 	PlayAlertSound 2 120
-	MinimapIcon 1 Green Hexagon
+	MinimapIcon 1 Green Circle
 	DisableDropSound
 Show # T4 essences
 	Class Currency
@@ -255,16 +258,16 @@ Show # T4 essences
 	SetTextColor 210 165 120
     SetBackgroundColor 130 90 50
 	SetBorderColor 210 165 120
-	SetFontSize 35
+	SetFontSize 38
 	PlayAlertSound 2 100
-	MinimapIcon 2 Green Hexagon
+	MinimapIcon 2 Green Circle
 	DisableDropSound
 Show # Remaining Esences
 	Class Currency
 	BaseType "Essence"
 	SetTextColor 210 165 120
     SetBackgroundColor 130 90 50
-	SetFontSize 31
+	SetFontSize 36
 	PlayAlertSound 2 80
 	DisableDropSound
 Show # Corrupt Essence
@@ -275,7 +278,7 @@ Show # Corrupt Essence
 	SetBorderColor 255 0 0
 	SetFontSize 40
 	PlayAlertSound 2 200
-	MinimapIcon 0 Green Hexagon
+	MinimapIcon 0 Green Circle
 	DisableDropSound
 #----------------------------------------------------
 #	[CUR][Fragments]
@@ -285,27 +288,27 @@ Show
     BaseType "Mortal Hope" "Mortal Ignorance"
     SetTextColor 255 0 0
     SetBorderColor 255 0 0
-    SetFontSize 39
+    SetFontSize 42
     PlayAlertSound 11 120
-	MinimapIcon 0 Yellow Hexagon
+	MinimapIcon 0 Brown Hexagon
 	DisableDropSound
 Show # Wide variety of valuable fragment types
     Class "Map Fragments"
     BaseType "Mortal Ignorance" "Mortal Hope" "Mortal Grief" "Mortal Rage" "Sacrifice at Midnight" "Fragment of the Hydra" "Fragment of the Minotaur" "Fragment of the Phoenix" "Fragment of the Chimera"
     SetTextColor 255 0 0
 	SetBorderColor 255 0 0 0
-    SetFontSize 39
+    SetFontSize 42
     PlayAlertSound 11 100
-	MinimapIcon 0 Yellow Hexagon
+	MinimapIcon 0 Brown Hexagon
 	DisableDropSound
 Show # Pale Council Keys
 	Class "Map Fragments"
     BaseType "Eber's Key" "Yriel's Key" "Inya's Key" "Volkuur's Key"
 	SetTextColor 255 0 0
 	SetBorderColor 255 0 0 0
-    SetFontSize 39
+    SetFontSize 40
     PlayAlertSound 11 100
-	MinimapIcon 0 Yellow Hexagon
+	MinimapIcon 0 Brown Hexagon
 	DisableDropSound
 Show # Offerings
 	Class "Labyrinth Map Item"
@@ -314,14 +317,23 @@ Show # Offerings
 	SetBorderColor 255 0 0 0
     SetFontSize 42
     PlayAlertSound 11 100
-	MinimapIcon 1 Yellow Hexagon
+	MinimapIcon 1 Brown Hexagon
+	DisableDropSound
+Show # Pale Council Keys
+	Class "Map Fragments"
+    BaseType "Scarab"
+	SetTextColor 255 0 0
+	SetBorderColor 255 0 0 0
+    SetFontSize 40
+    PlayAlertSound 11 100
+	MinimapIcon 0 Brown Hexagon
 	DisableDropSound
 Show # Remaining fragments
     Class "Map Fragments"
     SetTextColor 0 255 255
     SetBorderColor 255 0 0
 	PlayAlertSound 2 100
-	MinimapIcon 2 Yellow Hexagon
+	MinimapIcon 2 Brown Hexagon
 	DisableDropSound
 #----------------------------------------------------
 #	[CUR][Other-Currency]
@@ -331,7 +343,7 @@ Show # Lab stuff
 	SetTextColor 255 255 255
     SetBackgroundColor 30 130 25
     SetBorderColor 255 0 0
-    SetFontSize 38
+    SetFontSize 39
     PlayAlertSound 11 110
 	DisableDropSound
 Show # Prophecies
@@ -340,7 +352,7 @@ Show # Prophecies
     SetTextColor 255 255 255
     SetBackgroundColor 30 130 25
     SetBorderColor 255 255 255 0
-    SetFontSize 38
+    SetFontSize 39
     PlayAlertSound 11 110
 	DisableDropSound
 # Show # Leagestones
@@ -355,16 +367,16 @@ Show # Reliquary Key & Breachstones
 	SetTextColor 0 180 0
     SetBackgroundColor 255 255 255
     SetBorderColor 0 180 0
-    SetFontSize 55
+    SetFontSize 45
     PlayAlertSound 11 300
-	MinimapIcon 0 Red Diamond
+	MinimapIcon 0 Red Star
 	DisableDropSound
 Show # Pantheon Soul
 	Class "Pantheon Soul"
 	SetTextColor 0 180 0
     SetBackgroundColor 255 255 255
     SetBorderColor 0 180 0
-    SetFontSize 55
+    SetFontSize 45
     PlayAlertSound 11 300
 	DisableDropSound
 Show # Incursion
@@ -372,32 +384,82 @@ Show # Incursion
 	SetTextColor 255 255 255
     SetBackgroundColor 30 130 25
     SetBorderColor 255 0 0
-    SetFontSize 38
+    SetFontSize 40
     PlayAlertSound 11 110
-	MinimapIcon 2 Green Diamond
+	MinimapIcon 2 Green Star
 	DisableDropSound
 #----------------------------------------------------
 #	[CUR][Fossils]
 #----------------------------------------------------
-Show # Delve
+Show # Best fossils
 	Class Currency
-	BaseType "Fossil"
-	 SetTextColor 170 210 230
-    SetBackgroundColor 30 130 25
-    SetBorderColor 255 255 255 0
-    SetFontSize 37
-    PlayAlertSound 14 110
-	MinimapIcon 2 Green Diamond
+	BaseType "Faceted Fossil" "Fractured Fossil" "Hollow Fossil" "Shuddering Fossil" "Glyphic Fossil"
+	SetTextColor 255 255 255
+	SetBackgroundColor 30 130 25
+    SetBorderColor 255 255 255
+    SetFontSize 42
+    PlayAlertSound 14 200
+	MinimapIcon 0 Blue Circle
+	DisableDropSound
+Show # Good fossils
+	Class Currency
+	BaseType "Bloodstained Fossil" "Tangled Fossil" "Gilded Fossil" "Sanctified Fossil" "Lucent Fossil"
+	SetTextColor 255 255 255
+	SetBackgroundColor 30 130 25
+    #SetBorderColor 255 255 255
+    SetFontSize 39
+    PlayAlertSound 14 150
+	MinimapIcon 0 Blue Circle
 	DisableDropSound
 Show # Delve
 	Class Currency
-	BaseType "Resonator"
-	 SetTextColor 170 210 230
+	BaseType "Fossil"
+	SetTextColor 170 210 230
     SetBackgroundColor 30 130 25
     SetBorderColor 255 255 255 0
     SetFontSize 37
     PlayAlertSound 14 110
-	MinimapIcon 2 Green Diamond
+	MinimapIcon 1 Blue Circle
+	DisableDropSound
+Show # Delve
+	Class Currency
+	BaseType "Prime Chaotic Resonator" "Prime Alchemical Resonator"
+	SetTextColor 255 255 255
+	SetBackgroundColor 30 130 25
+    SetBorderColor 255 255 255
+    SetFontSize 40
+    PlayAlertSound 14 200
+	MinimapIcon 1 Blue Circle
+	DisableDropSound
+Show # Delve
+	Class Currency
+	BaseType "Chaotic Resonator"
+	SetTextColor 170 210 230
+	SetBackgroundColor 30 130 25
+    #SetBorderColor 255 255 255
+    SetFontSize 38
+    PlayAlertSound 14 110
+	MinimapIcon 1 Blue Circle
+	DisableDropSound
+Hide # Delve
+	Class Currency
+	BaseType "Powerful Alchemical Resonator" "Potent Alchemical Resonator"
+	SetTextColor 170 210 230
+	SetBackgroundColor 30 130 25
+    #SetBorderColor 255 255 255
+    SetFontSize 35
+    #PlayAlertSound 14 110
+	#MinimapIcon 2 Blue Circle
+	DisableDropSound
+Hide
+	Class Currency
+	BaseType "Resonator"
+	SetTextColor 255 255 255
+	SetBackgroundColor 30 130 25
+    #SetBorderColor 255 255 255
+    SetFontSize 38
+    #PlayAlertSound 14 110
+	#MinimapIcon 1 Blue Circle
 	DisableDropSound
 #----------------------------------------------------
 #	[CUR][Remaining]
@@ -405,7 +467,7 @@ Show # Delve
 Show # Remaining currency
     Class Currency
     SetTextColor 50 170 30 150
-	SetFontSize 34
+	SetFontSize 38
 	DisableDropSound
 #====================================================
 #		[Cards]
@@ -417,9 +479,19 @@ Show # Needs to be placed early to avoid being matched by "The Wolf"
 	SetBackgroundColor 200 120 0
     SetBorderColor 0 0 0 0
 	DisableDropSound
-Show # Most valuable divination cards, very roughly indexed to 60% of an exalt or higher
+Show # Most valuable divination cards, >= exalt
     Class Divination
-	BaseType "House of Mirrors" "The Doctor" "The Fiend" "The Immortal" "The Spark and the Flame" "Mawr Blaidd" "Hunter's Reward" "Abandoned Wealth"
+	BaseType "House of Mirrors" "The Doctor" "The Fiend" "Beauty Through Death" "The Immortal"
+    SetTextColor 255 255 255
+	SetBackgroundColor 200 120 0
+    SetBorderColor 255 255 255
+    SetFontSize 45
+    PlayAlertSound 5 220
+	MinimapIcon 0 Yellow Square
+	DisableDropSound
+Show # Most valuable divination cards, < exalt
+    Class Divination
+	BaseType "The Wolven King's Bite" "Hunter's Reward" "Abandoned Wealth" "The Samurai's Eye" "The Master" "The Dragon's Heart" "The Iron Bard" "Pride Before the Fall" "Wealth and Power" "The World Eater" "The King's Heart" "The Spark and the Flame" "Mawr Blaidd"  "The Celestial Stone" "The Wind" "The Hunger" "The Celestial Justicar" "The Saint's Treasure" "The Mayor"
     SetTextColor 255 255 255
 	SetBackgroundColor 200 120 0
     SetBorderColor 255 255 255
@@ -427,33 +499,33 @@ Show # Most valuable divination cards, very roughly indexed to 60% of an exalt o
     PlayAlertSound 5 220
 	MinimapIcon 0 Yellow Square
 	DisableDropSound
-Show # Valuable divination cards, very roughly indexed to10+ chaos in value
+Show # Valuable divination cards, ~>= 10c
     Class Divination
-	BaseType "The Wolven King's Bite" "The Iron Bard" "Pride Before the Fall" "The King's Heart" "The World Eater" "Wealth and Power" "The Last One Standing" "The Dragon's Heart" "The Wind" "The Queen" "The Wolf" "The Saint's Treasure" 
+	BaseType  "The Last One Standing" "The Queen" "The Wolf" "The Artist" "The Enlightened" "Heterochromia" "The Undaunted" "Boon of the First Ones" "The Polymath" "The Professor" "The Porcupine" "The Sephirot" "The Valkyrie" "The Ethereal" "Bowyer's Dream"
 	SetTextColor 255 255 255
 	SetBackgroundColor 200 120 0
     SetBorderColor 255 255 255 0
-    SetFontSize 37
+    SetFontSize 40
     PlayAlertSound 5 130
 	MinimapIcon 1 Yellow Square
 	DisableDropSound
-Show # Very roughly indexed to 5+ chaos in value
+Show # divination cards ~>= 5c
     Class Divination
-	BaseType "The Artist" "The Enlightened" "The Celestial Justicar" "Last Hope" "The Brittle Emperor" "The Formless Sea" "The Sephirot" "The Dreamer" "The Valkyrie" "The Hoarder" "Chaotic Disposition" "Left to Fate" "The Cartographer" "The Polymath" "The Risk" "Bowyer's Dream" "The Breach"
+	BaseType "Last Hope" "The Brittle Emperor" "The Formless Sea" "The Dreamer" "The Hoarder" "Chaotic Disposition" "Left to Fate" "The Cartographer" "The Risk" "The Breach" "The Offering" "The Ethereal" "The Dapper Prodigy" "Perfection" "The Valley of Steel Boxes" "The Endless Darkness" "The Jeweller's Boon" "The Vast" "The Brittle Emperor" "The Void" "The Dreamer"
 	SetTextColor 255 255 255
 	SetBackgroundColor 200 120 0
     SetBorderColor 255 255 255 0
-	SetFontSize 35
+	SetFontSize 38
 	PlayAlertSound 5 50
 	MinimapIcon 2 Yellow Square
 	DisableDropSound
-# Hide # Cards hidden temporarily
-	# Class Divination
-	# BaseType "The Lover" "Lantador's Lost Love" "The Calling" "Lysah's Respite"
-	# SetTextColor 255 185 70
-	# SetBackgroundColor 200 120 0
-    # SetBorderColor 0 0 0 0
-	# DisableDropSound
+Show # Cards hidden temporarily
+	Class Divination
+	BaseType "The Lover" "Lantador's Lost Love" "The Calling" "Lysah's Respite"
+	SetTextColor 255 185 70
+	SetBackgroundColor 200 120 0
+    SetBorderColor 0 0 0 0
+	DisableDropSound
 Hide # Hide bad cards
 	Class Divination
 	BaseType "The Carrion Crow" "The King's Blade"
@@ -470,74 +542,6 @@ Show # Remaining cards
 #====================================================
 #		[Maps]
 #====================================================
-#====================================================
-#		[Maps-Shaped]
-#====================================================
-Show # Elder Map	
-	Class Map
-	ElderMap True
-	SetTextColor 255 255 255 #230 240 255
-    SetBackgroundColor 0 100 200
-    SetBorderColor 255 255 255
-    SetFontSize 40
-    PlayAlertSound 13 250
-	MinimapIcon 0 Blue Triangle 
-	DisableDropSound
-Show # Tier 15-16 maps
-	Class Map
-	ShapedMap True
-    DropLevel >= 77
-    SetTextColor 230 230 230
-    SetBackgroundColor 0 100 200
-    SetBorderColor 230 230 230
-    SetFontSize 39
-    PlayAlertSound 3 200
-	MinimapIcon 1 Blue Triangle 
-	DisableDropSound
-Show # Tier 13-14 maps
-    Class Map
-	ShapedMap True
-	DropLevel >= 75
-    SetTextColor 200 200 200
-    SetBackgroundColor 0 115 230
-	SetBorderColor 200 200 200
-    SetFontSize 38
-    PlayAlertSound 3 150
-	MinimapIcon 1 Blue Triangle 
-	DisableDropSound
-Show # Tier 11-12 maps
-    Class Map
-	ShapedMap True
-	DropLevel >= 73
-    SetTextColor 200 230 255
-    SetBackgroundColor 0 115 230
-	SetBorderColor 255 255 255 0
-    SetFontSize 37
-    PlayAlertSound 3 150
-	MinimapIcon 1 Blue Triangle 
-	DisableDropSound
-Show # Tier 10 maps [4]
-	Class Map
-	ShapedMap True
-    DropLevel >= 72
-	SetTextColor 200 230 255
-    SetBackgroundColor 75 165 255
-    SetBorderColor 255 255 255 0
-    SetFontSize 34
-	MinimapIcon 2 Blue Triangle 
-	DisableDropSound
-Show # All remaining shaped maps
-    Class Map
-	ShapedMap True
-	SetBackgroundColor 130 190 255
-    # SetTextColor 100 100 100
-	SetTextColor 0 0 0
-    SetBorderColor 255 255 255 0
-	MinimapIcon 2 Blue Triangle 
-	DisableDropSound
-#====================================================
-#		[Maps-Normal]
-#====================================================
 Show # Unique maps
 	Class Map
     Rarity Unique
@@ -547,19 +551,29 @@ Show # Unique maps
     SetFontSize 40
 	MinimapIcon 1 Blue Triangle 
 	DisableDropSound
-Show # Tier 15-16 maps
+Show # Elder Map	
 	Class Map
-    DropLevel >= 82
+	MapTier >= 16
+	SetTextColor 255 255 255 #230 240 255
+    SetBackgroundColor 0 100 200
+    SetBorderColor 255 255 255
+    SetFontSize 43
+    PlayAlertSound 13 250
+	MinimapIcon 0 Blue Triangle 
+	DisableDropSound
+Show # Tier 15
+	Class Map
+    MapTier >= 15
     SetTextColor 230 240 255
     SetBackgroundColor 0 100 200
     SetBorderColor 230 240 255
     SetFontSize 41
     PlayAlertSound 3 200
-	MinimapIcon 1 Blue Triangle 
+	MinimapIcon 0 Blue Triangle 
 	DisableDropSound
 Show # Tier 13-14 maps
     Class Map
-	DropLevel >= 80
+	MapTier >= 13
     SetTextColor 230 230 230
     SetBackgroundColor 0 115 230
 	SetBorderColor 230 230 230
@@ -569,7 +583,7 @@ Show # Tier 13-14 maps
 	DisableDropSound
 Show # Tier 11-12 maps
     Class Map
-	DropLevel >= 78
+	MapTier >= 11
     SetTextColor 200 200 200
     SetBackgroundColor 0 115 230
 	SetBorderColor 200 200 200
@@ -577,9 +591,9 @@ Show # Tier 11-12 maps
     PlayAlertSound 3 150
 	MinimapIcon 1 Blue Triangle 
 	DisableDropSound
-Show # Tier 10 maps [4]
+Show # Tier 10 maps
 	Class Map
-    DropLevel >= 77
+    MapTier >= 10
 	SetTextColor 200 230 255
     SetBackgroundColor 75 165 255
     SetBorderColor 255 255 255 0
@@ -589,7 +603,6 @@ Show # Tier 10 maps [4]
 Show # All remaining maps
     Class Map
 	SetBackgroundColor 130 190 255
-    #SetTextColor 100 100 100
 	SetTextColor 0 0 0
     SetBorderColor 255 255 255 0
 	MinimapIcon 2 Blue Triangle 
@@ -597,16 +610,9 @@ Show # All remaining maps
 #====================================================
 #		[Gems]
 #====================================================
-Show # Enlighten, include drop sound
-    Class Gem
-    BaseType "Enlighten" "Empower" "Item Quantity"
-    SetBackgroundColor 80 0 0
-    SetFontSize 38
-	PlayAlertSound 2 80
-	DisableDropSound
 Show # Drop only gems
     Class Gem
-    BaseType "Empower" "Enlighten" "Portal" "Item Quantity"
+    BaseType "Empower" "Enlighten"  "Item Quantity" "Portal" "Detonate Mines"
     SetBackgroundColor 80 0 0
     SetFontSize 38
 	DisableDropSound
@@ -615,7 +621,7 @@ Show # Quality gems, 20%
 	Quality 20
     SetBackgroundColor 15 30 25
     SetBorderColor 255 255 255
-    SetFontSize 38
+    SetFontSize 39
 	DisableDropSound
 Show # Quality gems, 17%+
     Class Gem
@@ -625,26 +631,20 @@ Show # Quality gems, 17%+
     SetFontSize 37
 	DisableDropSound
 	#PlayAlertSound 2 570
-Show # GCP recipe, 14%+
+Show # GCP recipe, 15%+
     Class Gem
-	Quality >= 10
+	Quality >= 15
     SetBackgroundColor 15 30 25
     SetBorderColor 40 90 80
     SetFontSize 36
 	DisableDropSound
-Show # GCP recipe, 5%+
-    Quality >= 5
+Show # GCP recipe, 10%+
+    Quality >= 10
     Class Gem
     SetBackgroundColor 15 30 25
     #SetBorderColor 40 90 80
     SetFontSize 35
 	DisableDropSound
-# Show # GCP recipe, 2%+
-    # Quality > 2
-    # Class Gem
-    # SetBackgroundColor 15 30 25 230
-    # SetFontSize 33
-	# DisableDropSound
 Show # Level 20/21
 	Class Gem
 	GemLevel >= 20
@@ -652,7 +652,15 @@ Show # Level 20/21
     SetBorderColor 255 255 255
     SetFontSize 38
 	DisableDropSound
-Show
+Show # Leveled Empower/Enlighten/Enhance
+	Class Gem
+	GemLevel >= 2
+	BaseType "Enlighten" "Enhance" "Empower"
+	SetBackgroundColor 15 30 25
+    SetBorderColor 255 255 255
+    SetFontSize 38
+	DisableDropSound
+Hide
     Class Gem
 	DisableDropSound
 #====================================================
@@ -699,7 +707,7 @@ Show # Other 6L
 #====================================================
 Show # Best uniques
     Rarity Unique
-    BaseType "Sapphire Flask" "Glorious Plate" "Sacrificial Garb" "Sorcerer Boots" "Crusader Boots" "Rawhide Tower Shield" "Cutlass"
+    BaseType "Sapphire Flask" "Glorious Plate" "Sacrificial Garb" "Sorcerer Boots" "Crusader Boots" "Rawhide Tower Shield" "Prophecy Wand" "Riveted Gloves" "Gladiator Plate" "Rawhide Boots" "Prismatic Jewel"
     SetTextColor 255 255 255
     SetBackgroundColor 175 95 35
     SetBorderColor 255 255 255
@@ -708,7 +716,7 @@ Show # Best uniques
 	DisableDropSound
 Show # Uniques that are valuable early -- Comment out later in league
 	Rarity Unique
-	BaseType "Full Wyrmscale" "Nightmare Bascinet" "Crusader Gloves" "Ursine Pelt" "Ezomyte Burgonet"  "Siege Axe" "Granite Flask"
+	BaseType "Full Wyrmscale" "Nightmare Bascinet" "Crusader Gloves" "Ursine Pelt" "Ezomyte Burgonet" "Siege Axe" "Granite Flask"
 	SetTextColor 255 255 255
     SetBackgroundColor 175 95 35
 	SetBorderColor 255 255 255 0
@@ -717,7 +725,7 @@ Show # Uniques that are valuable early -- Comment out later in league
 	DisableDropSound
 Show # Good uniques
     Rarity Unique
-    BaseType "Occultist's Vestment" "Ezomyte Tower Shield"  "Void Axe" "Nubuck Gloves" "Carnal Sceptre"  "Bismuth Flask"
+    BaseType "Occultist's Vestment" "Ezomyte Tower Shield" "Void Axe" "Nubuck Gloves" "Carnal Sceptre" "Bismuth Flask"
     SetTextColor 255 255 255
     SetBackgroundColor 175 95 35
 	SetBorderColor 255 255 255 0
@@ -761,9 +769,6 @@ Show # 5L
     SetFontSize 35
 	DisableDropSound
 #====================================================
-#		[Incursion]
-#====================================================
-#====================================================
 #		[Special-Identified]
 #====================================================
 Show # Warbands
@@ -773,14 +778,27 @@ Show # Warbands
     Rarity Magic
     SetBorderColor 255 0 0
 	DisableDropSound
-Show # Incursion special items
+Show
+	Identified True
+	HasExplicitMod "Veil"
+	SetBorderColor 255 0 0
+	DisableDropSound
+Show # Special items
 	Identified True
 	HasExplicitMod "Tacati" "Citaqualotl" "Matatl" "Topotante" "Xopec" "Guatelitzi" "Puhuarte" "Subterranean" "of the Underground" "of Weaponcraft" "of Spellcraft" "of Crafting"
 	SetBorderColor 255 0 0
 	DisableDropSound
-Show # Corrupted	
-	Corrupted True
-	Class Ring Amulet Belt
+# Hide
+	# Class Ring
+	# BaseType "Breach Ring"
+# Hide # Corrupted	
+	# Corrupted True
+	# #Class Ring Amulet Belt
+	# Rarity Rare
+	# SetBorderColor 255 0 0
+	# DisableDropSound
+Show # Rares from Delve?
+	Identified True
 	Rarity Rare
 	SetBorderColor 255 0 0
 	DisableDropSound
@@ -1029,7 +1047,7 @@ Show
 	DisableDropSound
 Show # Regal recipe
 	Class "Amulet" "Ring"
-	BaseType "Two-Stone Ring" "Opal Ring" "Steel Ring" "Prismatic Ring" "Diamond Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Unset Ring" "Coral Ring" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Onyx Amulet" "Marble Amulet"
+	#BaseType "Two-Stone Ring" "Opal Ring" "Steel Ring" "Prismatic Ring" "Diamond Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Unset Ring" "Coral Ring" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Onyx Amulet" "Marble Amulet"
     ItemLevel > 74
     Rarity Rare
 	Corrupted False
@@ -1039,33 +1057,29 @@ Show # Regal recipe
 	DisableDropSound
 Show # Chaos Recipe
 	Class "Amulet" "Ring"
-	BaseType "Two-Stone Ring" "Opal Ring" "Steel Ring" "Prismatic Ring" "Diamond Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Unset Ring" "Coral Ring" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Onyx Amulet" "Marble Amulet"
+	#BaseType "Two-Stone Ring" "Opal Ring" "Steel Ring" "Prismatic Ring" "Diamond Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Unset Ring" "Coral Ring" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Onyx Amulet" "Marble Amulet"
     ItemLevel > 59
     Rarity Rare
 	Corrupted False
     SetBackgroundColor 90 90 0
-    #SetBorderColor 255 255 0
-	SetFontSize 34
+    SetFontSize 34
 	DisableDropSound
 Show
 	Class Belt
-	BaseType "Stygian Vise" "Vanguard Belt" "Crystal Belt"
+	#BaseType "Stygian Vise" "Vanguard Belt" "Crystal Belt"
     ItemLevel > 59
     Rarity Rare
 	SetBackgroundColor 90 90 0
 	SetBorderColor 255 255 0 0
 	DisableDropSound
-Show
-	Class Ring
-	BaseType "Breach Ring"
-# Hide # Rare Belts # "Heavy Belt" "Rustic Sash"
-	# Class Belt
-	# BaseType "Leather Belt" "Stygian Vise" "Vanguard Belt" "Crystal Belt"
-    # ItemLevel > 59
-    # Rarity Rare
-	# SetBackgroundColor 90 90 0
-	# SetBorderColor 255 255 0 0
-	# DisableDropSound
+Show # Rare Belts # "Heavy Belt" "Rustic Sash"
+	Class Belt
+	#BaseType "Leather Belt" "Stygian Vise" "Vanguard Belt" "Crystal Belt"
+    ItemLevel > 59
+    Rarity Rare
+	SetBackgroundColor 90 90 0
+	SetBorderColor 255 255 0 0
+	DisableDropSound
 Show
 	Class Ring Amulet
 	Rarity Rare
@@ -1081,26 +1095,26 @@ Show # Rare jewels
 	SetFontSize 39
 	DisableDropSound
 Show # Abyss Jewels
-	Class Abyss Jewel
-	Rarity Rare
+	Class "Abyss Jewel"
+	#Rarity Rare
 	SetBackgroundColor 60 60 0
 	SetBorderColor 0 255 0 0
 	SetFontSize 39
 	DisableDropSound
 Show # "Jewel"
 	Class "Abyss Jewel"
-	BaseType "Searching" "Murderous"
+	#BaseType "Searching" "Murderous"
 	ItemLevel >= 80
 	Rarity Magic
 	DisableDropSound
 #====================================================
 #		[Flasks]
 #====================================================
-Show # Glassblower bauble recipe
-	Class Flask
-	Quality >= 10
-	SetFontSize 25
-	DisableDropSound
+# Show # Glassblower bauble recipe
+	# Class Flask
+	# Quality >= 10
+	# SetFontSize 25
+	# DisableDropSound
 Show # Highlight Quicksilver Flask
 	Class "Flask"
 	ItemLevel < 65
@@ -1157,30 +1171,30 @@ Show # Utility Flasks
 #----------------------------------------------------
 #	[RAR][Armor]
 #----------------------------------------------------
-Show # AR Gloves
-	Class Gloves
-    Rarity Rare
-    BaseType "Titan Gauntlets"
-    SetBackgroundColor 120 60 0
-	SetBorderColor 0 0 0 0
-	SetFontSize 37
-	DisableDropSound
-Show # AR Boots
-	Class Boots
-    Rarity Rare
-    BaseType "Titan Greaves"
-    SetBackgroundColor 120 60 0
-	SetBorderColor 0 0 0 0
-	SetFontSize 37
-	DisableDropSound
-Show # AR Helmets
-	Class Helmet
-    Rarity Rare
-    BaseType "Eternal Burgonet" "Royal Burgonet"
-    SetBackgroundColor 120 60 0
-	SetBorderColor 0 0 0 0
-	SetFontSize 37
-	DisableDropSound
+# Show # AR Gloves
+	# Class Gloves
+    # Rarity Rare
+    # BaseType "Titan Gauntlets"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # AR Boots
+	# Class Boots
+    # Rarity Rare
+    # BaseType "Titan Greaves"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # AR Helmets
+	# Class Helmet
+    # Rarity Rare
+    # BaseType "Eternal Burgonet" "Royal Burgonet"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
 # Show # AR Chests; "Glorious Plate"
 	# Class "Body Armour"
     # Rarity Rare
@@ -1200,30 +1214,30 @@ Show # AR Helmets
 #----------------------------------------------------
 #	[RAR][Evasion]
 #----------------------------------------------------
-Show # EV Gloves
-	Class Gloves
-    Rarity Rare
-    BaseType "Slink Gloves"
-    SetBackgroundColor 120 60 0
-	SetBorderColor 0 0 0 0
-	SetFontSize 37
-	DisableDropSound
-Show # EV Boots
-	Class Boots
-    Rarity Rare
-    BaseType "Slink Boots"
-    SetBackgroundColor 120 60 0
-	SetBorderColor 0 0 0 0
-	SetFontSize 37
-	DisableDropSound
-Show # EV Helmets
-	Class Helmet
-    Rarity Rare
-    BaseType "Lion Pelt"
-    SetBackgroundColor 120 60 0
-	SetBorderColor 0 0 0 0
-	SetFontSize 37
-	DisableDropSound
+# Show # EV Gloves
+	# Class Gloves
+    # Rarity Rare
+    # BaseType "Slink Gloves"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # EV Boots
+	# Class Boots
+    # Rarity Rare
+    # BaseType "Slink Boots"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # EV Helmets
+	# Class Helmet
+    # Rarity Rare
+    # BaseType "Lion Pelt"
+    # SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
 # Show # EV Shields
 	# Class Shield
     # Rarity Rare
@@ -1396,24 +1410,34 @@ Show # Bone helmet
 #----------------------------------------------------
 #	[RAR][Weapons]
 #----------------------------------------------------
-Show # Foils
-	Class "Thrusting One Hand Sword"
-	Rarity Rare
-	BaseType "Jewelled Foil" "Spiraled Foil"
-	#ItemLevel >= 75
-	SetBackgroundColor 120 60 0
-	SetBorderColor 0 0 0 0
-	SetFontSize 37
-	DisableDropSound
-Show # Claws # "Eye Gouger" "Gemini Claw"
-	Class Claws
-	Rarity Rare
-	BaseType "Imperial Claw" 
-	#ItemLevel >= 75
-	SetBackgroundColor 120 60 0
-	SetBorderColor 0 0 0 0
-	SetFontSize 37
-	DisableDropSound
+# Show # Foils
+	# #Class "Thrusting One Hand Sword"
+	# Class "One Hand Sword"
+	# Rarity Rare
+	# BaseType "Jewelled Foil" "Spiraled Foil" "Corsair Sword"
+	# ItemLevel >= 75
+	# SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # Claws # "Eye Gouger" "Gemini Claw"
+	# Class Claws
+	# Rarity Rare
+	# BaseType "Imperial Claw" 
+	# #ItemLevel >= 75
+	# SetBackgroundColor 120 60 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
+# Show # Bows
+	# Class Bow
+    # Rarity Rare
+    # BaseType "Harbinger Bow"
+	# ItemLevel >= 80
+    # SetBackgroundColor 47 23 0
+	# SetBorderColor 0 0 0 0
+	# SetFontSize 37
+	# DisableDropSound
 # Show # Best attack daggers # "Imperial Skean" "Ezomyte Dagger"
 	# Class Dagger
     # Rarity Rare
@@ -1423,15 +1447,6 @@ Show # Claws # "Eye Gouger" "Gemini Claw"
 	# SetBorderColor 0 0 0 0
 	# SetFontSize 37
 	# DisableDropSound
-Show # Bows
-	Class Bow
-    Rarity Rare
-    BaseType "Harbinger Bow"
-	ItemLevel >= 80
-    SetBackgroundColor 47 23 0
-	SetBorderColor 0 0 0 0
-	SetFontSize 37
-	DisableDropSound
 # Show # Wands
 	# Class Wand
     # Rarity Rare
@@ -1467,74 +1482,70 @@ Show # 2x2 Chrome recipe [4]
     SetBackgroundColor 0 0 0 230
     SetBorderColor 172 225 47
 	DisableDropSound
-Show # 2x3 Chrome recipe, Uncomment [2]
-    Width 2
-    Height 3
-    SocketGroup "RGB"
-    SetBackgroundColor 0 0 0 180
-    SetBorderColor 172 225 47
-    SetFontSize 32
-	DisableDropSound
-Show # 1x4 Chrome recipe [4]
-    Width 1
-    Height 4
-    SocketGroup "RGB"
-    SetBackgroundColor 0 0 0 170
-    SetBorderColor 172 225 47
-    SetFontSize 31
-	DisableDropSound
-Show # 2x4 Chrome recipe, Uncomment [1]
-    Width 2
-    Height 4
-    SocketGroup "RGB"
-    SetBackgroundColor 0 0 0 120
-    SetBorderColor 172 225 47
-    SetFontSize 29
-	DisableDropSound
+# Show # 1x4 Chrome recipe [4]
+    # Width 1
+    # Height 4
+    # SocketGroup "RGB"
+    # SetBackgroundColor 0 0 0 170
+    # SetBorderColor 172 225 47
+    # SetFontSize 31
+	# DisableDropSound
+# Show # 2x3 Chrome recipe, Uncomment [2]
+    # Width 2
+    # Height 3
+    # SocketGroup "RGB"
+    # SetBackgroundColor 0 0 0 180
+    # SetBorderColor 172 225 47
+    # SetFontSize 32
+	# DisableDropSound
+# Show # 2x4 Chrome recipe, Uncomment [1]
+    # Width 2
+    # Height 4
+    # SocketGroup "RGB"
+    # SetBackgroundColor 0 0 0 120
+    # SetBorderColor 172 225 47
+    # SetFontSize 29
+	# DisableDropSound
 #====================================================
 #		[Rares]
 #====================================================
-# Hide # Gloves, Comment out: [3]
-	# Class Gloves
-	# Rarity Rare
-	# Identified False
-	# Corrupted False
-	# SetBorderColor 140 20 170
-	# DisableDropSound
-	SetBorderColor 0 0 0 0
-# Hide # Boots, Comment out: [3]
-	# Class Boots
-	# Rarity Rare
-	# Identified False
-	# Corrupted False
-	# SetBorderColor 50 160 20
-	# DisableDropSound
-	SetBorderColor 0 0 0 0
-# Hide # Helmet, Comment out: [3]
-	# Class Helmet
-	# Rarity Rare
-	# Identified False
-	# Corrupted False
-	# SetBorderColor 130 10 50
-	# DisableDropSound
-	SetBorderColor 0 0 0 0
-# Hide # 1x3 weapons
-	# Class "One Hand Sword" "One Hand Mace" "Dagger" "Wand"
-	# Rarity Rare
-	# Identified False
-	# Corrupted False
-	# Width 1
-    # Height 3
-	# SetBorderColor 255 165 0
-	# DisableDropSound
-	SetBorderColor 0 0 0 0
-# Hide
-	# Class "Body Armour"
-	# Rarity Rare
-	# Identified False
-	# Corrupted False
-	# SetBorderColor 100 100 50
-	# DisableDropSound
+Show # Gloves, Comment out: [3]
+	Class Gloves
+	Rarity Rare
+	Identified False
+	Corrupted False
+	SetBorderColor 140 20 170
+	DisableDropSound
+Show # Boots, Comment out: [3]
+	Class Boots
+	Rarity Rare
+	Identified False
+	Corrupted False
+	SetBorderColor 50 160 20
+	DisableDropSound
+Show # Helmet, Comment out: [3]
+	Class Helmet
+	Rarity Rare
+	Identified False
+	Corrupted False
+	SetBorderColor 130 10 50
+	DisableDropSound
+Show # 1x3 weapons
+	Class "One Hand Sword" "One Hand Mace" "Dagger" "Wand"
+	Rarity Rare
+	Identified False
+	Corrupted False
+	Width 1
+    Height 3
+	SetBorderColor 255 165 0
+	DisableDropSound
+Show
+	Class "Body Armour"
+	Rarity Rare
+	Identified False
+	Corrupted False
+	SetBorderColor 100 100 50
+	DisableDropSound
 # Hide # 1x3 Rares, unid # [2]
 	# Rarity Rare
 	# Identified False
@@ -1678,9 +1689,9 @@ Show # Hallowed, lvl36
     # BaseType "Stone Hammer" "Rock Breaker" "Gavel"
 	# SetBorderColor 255 255 255
 	# DisableDropSound
-Show
-	ItemLevel >= 84
-	BaseType "Lion Pelt"
+# Show
+	# ItemLevel >= 84
+	# BaseType "Lion Pelt"
 Show
 	Rarity Rare
 	DisableDropSound

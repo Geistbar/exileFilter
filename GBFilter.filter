@@ -30,6 +30,7 @@
 
 #	[Currency]
 #		[CUR][Pure-Currency]
+#		[CUR][League]
 #		[CUR][Switched]
 #		[CUR][Essences]
 #		[CUR][Fragments]
@@ -93,7 +94,7 @@ Show # Exalts, special sound
 	Class "Currency"
     BaseType "Exalted Orb"
     SetTextColor 0 180 0
-    SetBackgroundColor 255 255 255
+    SetBackgroundColor 230 255 230
     SetBorderColor 0 180 0
     SetFontSize 45
     PlayAlertSound ShExalted 300
@@ -103,7 +104,7 @@ Show # Divine Orb, special sound
 	Class Currency
     BaseType "Divine Orb"
     SetTextColor 0 180 0
-    SetBackgroundColor 200 200 200
+    SetBackgroundColor 200 220 200
     SetFontSize 43
     PlayAlertSound ShDivine 200
 	MinimapIcon 0 Red Star
@@ -112,7 +113,7 @@ Show # Other super currency
 	Class "Currency"
     BaseType "Eternal Orb" "Exalted Orb" "Mirror of Kalandra" "Albino Rhoa Feather" "Blessing of Chayula" "Mirror Shard"
     SetTextColor 0 180 0
-    SetBackgroundColor 255 255 255
+    SetBackgroundColor 230 255 230
     SetBorderColor 0 180 0
     SetFontSize 45
     PlayAlertSound 1 300
@@ -125,7 +126,7 @@ Show # Worth more than a chaos, less than exalt/divine
     SetBorderColor 255 255 255
     SetFontSize 42
     PlayAlertSound 2 130
-	MinimapIcon 0 Red Circle
+	MinimapIcon 0 Green Circle
 	DisableDropSound
 Show # Wide category, catches everything closer to a chaos than to a divine
 	Class Currency
@@ -135,8 +136,30 @@ Show # Wide category, catches everything closer to a chaos than to a divine
     SetBorderColor 170 210 230
     SetFontSize 40
     PlayAlertSound 2 130
-	MinimapIcon 1 Red Circle
+	MinimapIcon 1 Green Circle
 	DisableDropSound
+Show # Just below the near Chaos category
+	Class Currency
+    BaseType "Cartographer's Chisel" "Orb of Alchemy" "Jeweller's Orb" "Silver Coin" "Orb of Scouring" "Orb of Fusing" "Blessed Orb" "Perandus Coin"
+    SetTextColor 170 210 230
+    SetBackgroundColor 30 130 25
+    SetBorderColor 255 255 255 0
+    SetFontSize 39
+    PlayAlertSound 14 110
+	MinimapIcon 2 Green Circle
+	DisableDropSound
+Show # Wisdom Stack
+	Class Currency
+    BaseType "Scroll of Wisdom"
+	StackSize > 9
+    SetTextColor 50 170 30
+	SetBackgroundColor 40 70 40
+	SetFontSize 37
+	MinimapIcon 2 Green Circle
+	DisableDropSound
+#----------------------------------------------------
+#	[CUR][League]
+#----------------------------------------------------
 Show # Chayula Splinter
 	Class Currency
     BaseType "Splinter of Chayula"
@@ -145,7 +168,7 @@ Show # Chayula Splinter
     SetBorderColor 200 150 255
     SetFontSize 40
     PlayAlertSound 2 130
-	MinimapIcon 1 Red Circle
+	MinimapIcon 1 Green Circle
 	DisableDropSound
 Show # Splinters
 	Class Currency
@@ -155,92 +178,97 @@ Show # Splinters
 	SetBorderColor 255 255 255 0
     SetFontSize 38
     PlayAlertSound 14 110
-	MinimapIcon 2 Red Circle
+	MinimapIcon 2 Green Circle
 	DisableDropSound
-Show # Just below the near Chaos category
+Show # Best Harbinger Stuff
 	Class Currency
-    BaseType "Cartographer's Chisel" "Orb of Alchemy" "Jeweller's Orb" "Silver Coin" "Orb of Scouring" "Orb of Fusing" "Blessed Orb"
-    SetTextColor 170 210 230
+	BaseType "Ancient Shard" "Harbinger's Shard" "Annulment Shard" "Mirror Shard" "Harbinger's Orb" "Ancient Orb"
+	SetTextColor 200 150 255
     SetBackgroundColor 30 130 25
-    SetBorderColor 255 255 255 0
+	SetBorderColor 200 150 255
     SetFontSize 39
     PlayAlertSound 14 110
-	MinimapIcon 2 Red Circle
-	DisableDropSound
-Show
-Class Currency
-    BaseType "Scroll of Wisdom"
-	StackSize > 9
-    SetTextColor 50 170 30
-	SetBackgroundColor 40 70 40
-	SetFontSize 37
-	DisableDropSound
-#----------------------------------------------------
-#	[CUR][Switched]
-#----------------------------------------------------
-Hide # Lowest currencies worth picking up
-	Class Currency
-    BaseType "Orb of Alteration" "Glassblower's Bauble" "Chromatic Orb" "Perandus Coin" "Orb of Chance"
-    SetTextColor 50 170 30
-    #SetBorderColor 50 170 30
-	SetBackgroundColor 40 70 40
-    #PlayAlertSound 14 70
-	SetFontSize 37
-	DisableDropSound
-Hide
-	Class Currency
-    BaseType "Orb of Transmutation" "Blacksmith's Whetstone"
-    SetTextColor 50 170 30
-    SetBorderColor 255 255 255 0
-	SetFontSize 35
-	DisableDropSound
-Hide 
-	Class Currency
-    BaseType "Orb of Transmutation" "Orb of Augmentation" "Blacksmith's Whetstone" "Armourer's Scrap" 
-    SetTextColor 50 170 30
-    SetBorderColor 255 255 255 0
-	SetFontSize 35
+	MinimapIcon 1 Green Circle
 	DisableDropSound
 Show # Harbinger Stuff
 	Class Currency
-	BaseType "Ancient Shard" "Harbinger's Shard" "Annulment Shard" "Binding Shard" "Horizon Shard" "Engineer's Shard" "Chaos Shard" "Mirror Shard" "Regal Shard" "Orb of Binding" "Orb of Horizons" "Harbinger's Orb" "Engineer's Orb" "Ancient Orb"
+	BaseType "Binding Shard" "Horizon Shard" "Engineer's Shard" "Chaos Shard" "Regal Shard" "Orb of Binding" "Orb of Horizons" "Engineer's Orb"
 	SetTextColor 200 150 255
     SetBackgroundColor 30 130 25
 	SetBorderColor 255 255 255 0
     SetFontSize 38
     PlayAlertSound 14 110
+	MinimapIcon 2 Green Circle
 	DisableDropSound
-# Show # Beastiary
-	# Class Currency
-	# BaseType "Bestiary Orb" "Imprinted Bestiary Orb" "Thaumaturgical Net" "Necromancy Net"
-	# SetTextColor 255 185 80
-    # SetBackgroundColor 30 130 25
-	# SetBorderColor 255 255 255 0
-    # PlayAlertSound 14 50
-	# DisableDropSound
-# Hide # Bestiary nets
-	# Class Currency
-	# BaseType "Simple Rope Net" "Reinforced Rope Net" "Strong Rope Net" "Simple Iron Net" "Reinforced Iron Net" "Strong Iron Net" "Simple Steel Net" "Reinforced Steel Net" "Strong Steel Net"
-	# DisableDropSound
+Show # Incursion Vials
+	Class Currency
+    BaseType "Vial of Sacrifice" "Vial of the Ghost" "Vial of Awakening"
+    SetTextColor 0 180 0
+    SetBackgroundColor 230 255 230
+    SetBorderColor 0 180 0
+    PlayAlertSound 14 200
+	SetFontSize 40
+	MinimapIcon 0 Red Star
+	DisableDropSound
 Show # Incursion Vials
 	Class Currency
     BaseType "Vial"
+    SetTextColor 170 210 230
+    SetBackgroundColor 30 130 25
+    SetBorderColor 170 210 230
+    PlayAlertSound 14 70
+	SetFontSize 35
+	MinimapIcon 1 Brown Hexagon
+	DisableDropSound
+# Show # Legacy Leagestones
+	# Class "Leaguestone" 
+	# SetTextColor 255 255 255
+	# SetBackgroundColor 255 0 255
+	# SetBorderColor 255 255 255
+	# PlayAlertSound 11 100
+	# DisableDropSound
+#----------------------------------------------------
+#	[CUR][Switched]
+#----------------------------------------------------
+Show # Lowest currencies worth picking up
+	Class Currency
+    BaseType "Orb of Alteration" "Glassblower's Bauble" "Chromatic Orb" "Orb of Chance"
     SetTextColor 50 170 30
     SetBackgroundColor 40 70 40
-    PlayAlertSound 14 70
-	SetFontSize 40
+    #PlayAlertSound 14 70
+	SetFontSize 37
+	DisableDropSound
+Show # For vendoring into wisdom scrolls
+	Class Currency
+    BaseType "Orb of Transmutation" "Blacksmith's Whetstone"
+    SetTextColor 50 170 30
+    SetBorderColor 255 255 255 0
+	SetBackgroundColor 15 50 15
+	SetFontSize 35
+	DisableDropSound
+Show # Small currencies that I want a stockpile of before hiding
+	Class Currency
+    BaseType "Orb of Transmutation" "Orb of Augmentation" "Blacksmith's Whetstone" "Armourer's Scrap" 
+    SetTextColor 50 170 30
+    SetBorderColor 255 255 255 0
+	SetBackgroundColor 15 50 15
+	SetFontSize 35
 	DisableDropSound
 Hide # Scrolls -- Hide after getting portal gem UnHide [1]
     Class Currency
 	BaseType "Scroll of Wisdom" 
     SetTextColor 50 170 30 150
-	SetFontSize 37
+	SetBackgroundColor 15 50 15
+	SetFontSize 32
+	#SetFontSize 37
 	DisableDropSound
 Hide # Scrolls -- Hide after getting portal gem UnHide [1]
     Class Currency
 	BaseType "Portal Scroll"
     SetTextColor 50 170 30 150
-	SetFontSize 37
+	SetBackgroundColor 15 50 15
+	SetFontSize 32
+	#SetFontSize 37
 	DisableDropSound
 #----------------------------------------------------
 #	[CUR][Essences]
@@ -249,36 +277,36 @@ Show # T7 essences and corruption only essences
 	Class Currency
 	BaseType  "Deafening Essence" "Essence of Hysteria" "Essence of Insanity" "Essence of Horror" "Essence of Delirium"
 	SetTextColor 255 255 255
-    SetBackgroundColor 130 90 50
+    SetBackgroundColor 100 70 40
 	SetBorderColor 255 255 255
 	SetFontSize 42
 	PlayAlertSound 2 200
-	MinimapIcon 0 Green Circle
+	MinimapIcon 0 Brown Circle
 	DisableDropSound
 Show # T5 and T6 essences
 	Class Currency
 	BaseType "Shrieking Essence" "Screaming Essence"
 	SetTextColor 255 255 255
-    SetBackgroundColor 130 90 50
+    SetBackgroundColor 100 70 40
 	SetFontSize 40
 	PlayAlertSound 2 120
-	MinimapIcon 1 Green Circle
+	MinimapIcon 1 Brown Circle
 	DisableDropSound
 Show # T4 essences
 	Class Currency
 	BaseType "Wailing Essence"
 	SetTextColor 210 165 120
-    SetBackgroundColor 130 90 50
+    SetBackgroundColor 100 70 40
 	SetBorderColor 210 165 120
 	SetFontSize 38
 	PlayAlertSound 2 100
-	MinimapIcon 2 Green Circle
+	MinimapIcon 2 Brown Circle
 	DisableDropSound
 Show # Remaining Esences
 	Class Currency
 	BaseType "Essence"
 	SetTextColor 210 165 120
-    SetBackgroundColor 130 90 50
+    SetBackgroundColor 100 70 40
 	SetFontSize 36
 	PlayAlertSound 2 80
 	DisableDropSound
@@ -286,11 +314,11 @@ Show # Corrupt Essence
 	Class Currency
 	BaseType "Remnant of Corruption"
 	SetTextColor 255 255 255
-    SetBackgroundColor 130 90 50
-	SetBorderColor 255 0 0
+    SetBackgroundColor 100 70 40
+	SetBorderColor 200 155 105
 	SetFontSize 40
 	PlayAlertSound 2 200
-	MinimapIcon 0 Green Circle
+	MinimapIcon 0 Brown Circle
 	DisableDropSound
 #----------------------------------------------------
 #	[CUR][Fragments]
@@ -299,6 +327,7 @@ Show
 	Class "Map Fragments"
     BaseType "Mortal Hope" "Mortal Ignorance"
     SetTextColor 255 0 0
+	SetBackgroundColor 50 0 0
     SetBorderColor 255 0 0
     SetFontSize 42
     PlayAlertSound 11 120
@@ -309,6 +338,7 @@ Show # Wide variety of valuable fragment types
     BaseType "Mortal Ignorance" "Mortal Hope" "Mortal Grief" "Mortal Rage" "Sacrifice at Midnight" "Fragment of the Hydra" "Fragment of the Minotaur" "Fragment of the Phoenix" "Fragment of the Chimera"
     SetTextColor 255 0 0
 	SetBorderColor 255 0 0 0
+	SetBackgroundColor 50 0 0
     SetFontSize 42
     PlayAlertSound 11 100
 	MinimapIcon 0 Brown Hexagon
@@ -318,6 +348,7 @@ Show # Pale Council Keys
     BaseType "Eber's Key" "Yriel's Key" "Inya's Key" "Volkuur's Key"
 	SetTextColor 255 0 0
 	SetBorderColor 255 0 0 0
+	SetBackgroundColor 50 0 0
     SetFontSize 40
     PlayAlertSound 11 100
 	MinimapIcon 0 Brown Hexagon
@@ -327,14 +358,35 @@ Show # Offerings
     BaseType "Offering to the Goddess"
 	SetTextColor 255 0 0
 	SetBorderColor 255 0 0 0
+	SetBackgroundColor 50 0 0
     SetFontSize 42
     PlayAlertSound 11 100
 	MinimapIcon 1 Brown Hexagon
 	DisableDropSound
+Show # Cartography Scarabs
+	Class "Map Fragments"
+    BaseType "Cartography Scarab"
+	SetTextColor 255 0 0
+	SetBorderColor 255 0 0 0
+	SetBackgroundColor 50 0 0
+    SetFontSize 41
+    PlayAlertSound 11 120
+	MinimapIcon 0 Brown Hexagon
+	DisableDropSound
+Show # Scarabs
+	Class "Map Fragments"
+    BaseType "Scarab"
+	SetTextColor 255 0 0
+	SetBackgroundColor 50 0 0
+    SetFontSize 38
+    PlayAlertSound 11 100
+	MinimapIcon 0 Brown Hexagon
+	DisableDropSound
 Show # Remaining fragments
     Class "Map Fragments"
     SetTextColor 0 255 255
-    SetBorderColor 255 0 0
+	SetBackgroundColor 0 30 30
+    #SetBorderColor 255 0 0
 	PlayAlertSound 2 100
 	MinimapIcon 2 Brown Hexagon
 	DisableDropSound
@@ -349,6 +401,16 @@ Show # Lab stuff
     SetFontSize 39
     PlayAlertSound 11 110
 	DisableDropSound
+Show # Best Prophecies
+	Class Currency
+	BaseType "The Queen's Sacrifice" "Fated Connections" "Trash to Treasure"
+    SetTextColor 0 180 0
+    SetBackgroundColor 230 255 230
+    SetBorderColor 0 180 0
+    SetFontSize 43
+    PlayAlertSound 11 160
+	MinimapIcon 0 Red Star
+	DisableDropSound
 Show # Prophecies
 	Class Currency
     BaseType "Prophecy"
@@ -358,17 +420,10 @@ Show # Prophecies
     SetFontSize 39
     PlayAlertSound 11 110
 	DisableDropSound
-# Show # Leagestones
-	# Class "Leaguestone" 
-	# SetTextColor 255 255 255
-	# SetBackgroundColor 255 0 255
-	# SetBorderColor 255 255 255
-	# PlayAlertSound 11 100
-	# DisableDropSound
 Show # Reliquary Key & Breachstones
 	Class "Misc Map Items"
 	SetTextColor 0 180 0
-    SetBackgroundColor 255 255 255
+    SetBackgroundColor 230 255 230
     SetBorderColor 0 180 0
     SetFontSize 45
     PlayAlertSound 11 300
@@ -414,7 +469,7 @@ Show # Good fossils
     PlayAlertSound 14 150
 	MinimapIcon 0 Blue Circle
 	DisableDropSound
-Show # Delve
+Show # Remaining Fossils
 	Class Currency
 	BaseType "Fossil"
 	SetTextColor 170 210 230
@@ -424,7 +479,7 @@ Show # Delve
     PlayAlertSound 14 110
 	MinimapIcon 1 Blue Circle
 	DisableDropSound
-Show # Delve
+Show # Prime Resonators
 	Class Currency
 	BaseType "Prime Chaotic Resonator" "Prime Alchemical Resonator"
 	SetTextColor 255 255 255
@@ -434,7 +489,7 @@ Show # Delve
     PlayAlertSound 14 200
 	MinimapIcon 1 Blue Circle
 	DisableDropSound
-Show # Delve
+Show # Chaotic Resonators
 	Class Currency
 	BaseType "Chaotic Resonator"
 	SetTextColor 170 210 230
@@ -444,7 +499,7 @@ Show # Delve
     PlayAlertSound 14 110
 	MinimapIcon 1 Blue Circle
 	DisableDropSound
-Hide # Delve
+Hide # Alchemical Resonators
 	Class Currency
 	BaseType "Powerful Alchemical Resonator" "Potent Alchemical Resonator"
 	SetTextColor 170 210 230
@@ -454,7 +509,7 @@ Hide # Delve
     #PlayAlertSound 14 110
 	#MinimapIcon 2 Blue Circle
 	DisableDropSound
-Hide
+Hide # Other Resonators
 	Class Currency
 	BaseType "Resonator"
 	SetTextColor 255 255 255
@@ -470,21 +525,22 @@ Hide
 Show # Remaining currency
     Class Currency
     SetTextColor 50 170 30 150
+	SetBackgroundColor 15 50 15
 	SetFontSize 38
 	DisableDropSound
 #====================================================
 #		[Cards]
 #====================================================
-Show # Needs to be placed early to avoid being matched by "The Wolf"
+Show # Needs to be placed early to avoid being matched by "The Wolf" or "The Master"
     Class Divination
-	BaseType "The Wolf's Shadow"
+	BaseType "The Wolf's Shadow" "The Master Artisan"
 	SetTextColor 255 215 150
 	SetBackgroundColor 200 120 0
     SetBorderColor 0 0 0 0
 	DisableDropSound
-Show # Most valuable divination cards, >= exalt
+Show # Most valuable divination cards: >= exalt
     Class Divination
-	BaseType "House of Mirrors" "The Doctor" "The Fiend" "Beauty Through Death" "The Immortal"
+	BaseType "House of Mirrors" "The Doctor" "The Fiend" "Beauty Through Death" "Immortal Resolve" "The Immortal"
     SetTextColor 255 255 255
 	SetBackgroundColor 200 120 0
     SetBorderColor 255 255 255
@@ -492,9 +548,9 @@ Show # Most valuable divination cards, >= exalt
     PlayAlertSound 5 220
 	MinimapIcon 0 Yellow Square
 	DisableDropSound
-Show # Most valuable divination cards, < exalt
+Show # Most valuable divination cards: 30c+
     Class Divination
-	BaseType "The Wolven King's Bite" "Hunter's Reward" "Abandoned Wealth" "The Samurai's Eye" "The Master" "The Dragon's Heart" "The Iron Bard" "Pride Before the Fall" "Wealth and Power" "The World Eater" "The King's Heart" "The Spark and the Flame" "Mawr Blaidd"  "The Celestial Stone" "The Wind" "The Hunger" "The Celestial Justicar" "The Saint's Treasure" "The Mayor"
+	BaseType "The Nurse" "The Wolven King's Bite" "Abandoned Wealth" "The Spark and the Flame" "The Samurai's Eye" "The Iron Bard" "Wealth and Power" "Hunter's Reward" "The Dragon's Heart" "Pride Before the Fall" "The King's Heart" "The World Eater"
     SetTextColor 255 255 255
 	SetBackgroundColor 200 120 0
     SetBorderColor 255 255 255
@@ -502,9 +558,9 @@ Show # Most valuable divination cards, < exalt
     PlayAlertSound 5 220
 	MinimapIcon 0 Yellow Square
 	DisableDropSound
-Show # Valuable divination cards, ~>= 10c
+Show # Valuable divination cards: 10-30c
     Class Divination
-	BaseType  "The Last One Standing" "The Queen" "The Wolf" "The Artist" "The Enlightened" "Heterochromia" "The Undaunted" "Boon of the First Ones" "The Polymath" "The Professor" "The Porcupine" "The Sephirot" "The Valkyrie" "The Ethereal" "Bowyer's Dream"
+	BaseType "The Offering" "The Endless Darkness" "The Aritst" "The Enlightened" "The Brittle Emperor" "The Saint's Treasure" "Mawr Blaidd" "The Risk" "The Celestial Stone" "The Ethereal" "A Dab of Ink" "The Queen" "The Mayor" 
 	SetTextColor 255 255 255
 	SetBackgroundColor 200 120 0
     SetBorderColor 255 255 255 0
@@ -512,9 +568,9 @@ Show # Valuable divination cards, ~>= 10c
     PlayAlertSound 5 130
 	MinimapIcon 1 Yellow Square
 	DisableDropSound
-Show # divination cards ~>= 5c
+Show # Divination cards 5c+
     Class Divination
-	BaseType "Last Hope" "The Brittle Emperor" "The Formless Sea" "The Dreamer" "The Hoarder" "Chaotic Disposition" "Left to Fate" "The Cartographer" "The Risk" "The Breach" "The Offering" "The Ethereal" "The Dapper Prodigy" "Perfection" "The Valley of Steel Boxes" "The Endless Darkness" "The Jeweller's Boon" "The Vast" "The Brittle Emperor" "The Void" "The Dreamer"
+	BaseType "Last Hope" "The Void" "The Hale Heart" "The Valkyrie" "The Dapper Prodigy" "The Cartographer" "The Jeweller's Boon" "The Porcupine" "The Dreamer" "Chaotic Disposition" "The Throne" "The Valley of Steel Boxes" "Heterochromia" "Boon of the First Ones" "The Undisputed" "The Wolf" "The Thaumaturgist" "The Sephirot" "The Sacrifice" "The Hunger" "The Formless Sea" "The Professor" "The Polymath" "The Last One Standing" "The Master" "The Celestial Justicar" "The Hoarder"
 	SetTextColor 255 255 255
 	SetBackgroundColor 200 120 0
     SetBorderColor 255 255 255 0
@@ -522,17 +578,17 @@ Show # divination cards ~>= 5c
 	PlayAlertSound 5 50
 	MinimapIcon 2 Yellow Square
 	DisableDropSound
-Hide # Cards hidden temporarily
-	Class Divination
-	BaseType "The Lover" "Lantador's Lost Love" "The Calling" "Lysah's Respite"
-	SetTextColor 255 185 70
-	SetBackgroundColor 200 120 0
-    SetBorderColor 0 0 0 0
-	DisableDropSound
+# Show # Cards hidden temporarily
+	# Class Divination
+	# BaseType "The Lover" "Lantador's Lost Love" "The Calling" "Lysah's Respite"
+	# SetTextColor 255 215 150
+	# SetBackgroundColor 200 120 0
+    # SetBorderColor 0 0 0 0
+	# DisableDropSound
 Hide # Hide bad cards
 	Class Divination
 	BaseType "The Carrion Crow" "The King's Blade"
-	SetTextColor 255 185 70
+	SetTextColor 255 215 150
 	SetBackgroundColor 200 120 0
     SetBorderColor 0 0 0 0
 	DisableDropSound
@@ -597,15 +653,14 @@ Show # Tier 11-12 maps
 Show # Tier 10 maps
 	Class Map
     MapTier >= 10
-	SetTextColor 200 230 255
-    SetBackgroundColor 75 165 255
-    SetBorderColor 255 255 255 0
+	SetTextColor 200 200 200
+    SetBackgroundColor 0 115 230
     SetFontSize 35
 	MinimapIcon 2 Blue Triangle 
 	DisableDropSound
 Show # All remaining maps
     Class Map
-	SetBackgroundColor 130 190 255
+	SetBackgroundColor 75 165 255
 	SetTextColor 0 0 0
     SetBorderColor 255 255 255 0
 	MinimapIcon 2 Blue Triangle 
@@ -615,9 +670,10 @@ Show # All remaining maps
 #====================================================
 Show # Drop only gems
     Class Gem
-    BaseType "Empower" "Enlighten"  "Item Quantity" "Portal"
+    BaseType "Empower" "Enlighten" "Item Quantity" "Portal"
     SetBackgroundColor 80 0 0
     SetFontSize 38
+	MinimapIcon 1 Brown Square
 	DisableDropSound
 Show # Quality gems, 20%
     Class Gem
@@ -625,6 +681,8 @@ Show # Quality gems, 20%
     SetBackgroundColor 15 30 25
     SetBorderColor 255 255 255
     SetFontSize 39
+	PlayAlertSound 2 150
+	MinimapIcon 0 Brown Square
 	DisableDropSound
 Show # Quality gems, 17%+
     Class Gem
@@ -633,6 +691,8 @@ Show # Quality gems, 17%+
     SetBorderColor 60 120 110
     SetFontSize 37
 	DisableDropSound
+	PlayAlertSound 2 130
+	MinimapIcon 1 Brown Square
 	#PlayAlertSound 2 570
 Show # GCP recipe, 15%+
     Class Gem
@@ -640,6 +700,8 @@ Show # GCP recipe, 15%+
     SetBackgroundColor 15 30 25
     SetBorderColor 40 90 80
     SetFontSize 36
+	PlayAlertSound 2 100
+	MinimapIcon 1 Brown Square
 	DisableDropSound
 Show # GCP recipe, 10%+
     Quality >= 10
@@ -647,13 +709,16 @@ Show # GCP recipe, 10%+
     SetBackgroundColor 15 30 25
     #SetBorderColor 40 90 80
     SetFontSize 35
+	MinimapIcon 2 Brown Square
 	DisableDropSound
 Show # Level 20/21
 	Class Gem
 	GemLevel >= 20
 	SetBackgroundColor 15 30 25
     SetBorderColor 255 255 255
-    SetFontSize 38
+    SetFontSize 40
+	PlayAlertSound 2 200
+	MinimapIcon 0 Brown Square
 	DisableDropSound
 Show # Leveled Empower/Enlighten/Enhance
 	Class Gem
@@ -661,17 +726,21 @@ Show # Leveled Empower/Enlighten/Enhance
 	BaseType "Enlighten" "Enhance" "Empower"
 	SetBackgroundColor 15 30 25
     SetBorderColor 255 255 255
-    SetFontSize 38
+    SetFontSize 40
+	PlayAlertSound 2 200
+	MinimapIcon 0 Brown Square
 	DisableDropSound
 Hide
     Class Gem
+	SetBackgroundColor 15 30 25
+	SetFontSize 34
 	DisableDropSound
 #====================================================
 #		[Fishing]
 #====================================================
 Show # Fishing Rods
     Class "Fishing Rod"
-    SetTextColor 255 255 255
+    SetTextColor 255 200 200
     SetBackgroundColor 255 0 0
     SetBorderColor 0 0 0 0
     SetFontSize 55
@@ -686,36 +755,41 @@ Show # Tabula / Skin of the Loyal
     BaseType "Simple Robe"
     SetFontSize 40
     SetBorderColor 175 95 35
+	SetBackgroundColor 45 20 15
     PlayAlertSound 4 100
+	MinimapIcon 1 White Diamond
 	DisableDropSound
 Show # Unique 6L
 	Rarity Unique
     LinkedSockets 6
     SetTextColor 0 0 255
     SetBackgroundColor 255 255 255
-	SetBorderColor 255 0 0
+	SetBorderColor 0 0 255
     SetFontSize 45
     PlayAlertSound 6 255
+	MinimapIcon 0 White Diamond
 	DisableDropSound
 Show # Other 6L
     LinkedSockets 6
     SetTextColor 0 0 255
-    SetBackgroundColor 255 255 255
+    SetBackgroundColor 220 220 220
 	SetBorderColor 255 255 255 0
     SetFontSize 45
     PlayAlertSound 15 150
+	MinimapIcon 1 White Diamond
 	DisableDropSound
 #====================================================
 #		[Uniques]
 #====================================================
 Show # Best uniques
     Rarity Unique
-    BaseType "Sapphire Flask" "Glorious Plate" "Sacrificial Garb" "Sorcerer Boots" "Crusader Boots" "Rawhide Tower Shield" "Prophecy Wand" "Riveted Gloves" "Gladiator Plate" "Rawhide Boots" "Prismatic Jewel"
+    BaseType  "Glorious Plate" "Sacrificial Garb" "Sorcerer Boots" "Crusader Boots" "Prophecy Wand" "Riveted Gloves" "Rawhide Boots" "Prismatic Jewel" "Jewelled Foil"
     SetTextColor 255 255 255
     SetBackgroundColor 175 95 35
     SetBorderColor 255 255 255
     SetFontSize 50
     PlayAlertSound 6 255
+	MinimapIcon 0 Brown Diamond
 	DisableDropSound
 # Show # Uniques that are valuable early -- Comment out later in league
 	# Rarity Unique
@@ -728,12 +802,22 @@ Show # Best uniques
 	# DisableDropSound
 Show # Good uniques
     Rarity Unique
-    BaseType "Occultist's Vestment" "Ezomyte Tower Shield" "Void Axe" "Nubuck Gloves" "Carnal Sceptre" "Bismuth Flask"
+    BaseType "Occultist's Vestment" "Ezomyte Tower Shield" "Bismuth Flask" "Sapphire Flask" "Thorium Spirit Shield" "Rawhide Tower Shield"
     SetTextColor 255 255 255
     SetBackgroundColor 175 95 35
 	SetBorderColor 255 255 255 0
     SetFontSize 37
 	PlayAlertSound 6 120
+	MinimapIcon 1 Brown Diamond
+	DisableDropSound
+Show # Unique Jewels
+	Rarity Unique
+	Class Jewel
+	SetFontSize 40
+	SetBorderColor 100 200 200
+	SetBackgroundColor 45 20 15
+	PlayAlertSound 4 100
+	MinimapIcon 2 Brown Diamond
 	DisableDropSound
 Show # Unique pieces, Harbinger League
 	Class "Piece"
@@ -742,18 +826,14 @@ Show # Unique pieces, Harbinger League
 	SetBorderColor 255 255 255 0
     SetFontSize 42
 	PlayAlertSound 6 200
-	DisableDropSound
-Show # Unique Jewels
-	Rarity Unique
-	Class Jewel
-	SetFontSize 40
-	SetBorderColor 100 200 200
-	PlayAlertSound 4 100
+	MinimapIcon 2 Brown Diamond
 	DisableDropSound
 Show # All other uniques
     Rarity Unique
     SetFontSize 40
+	SetBackgroundColor 45 20 15
     PlayAlertSound 4 100
+	MinimapIcon 2 Brown Diamond
 	DisableDropSound
 #====================================================
 #		[5L-6S]
@@ -761,115 +841,263 @@ Show # All other uniques
 Show # 6S
     Sockets 6
     SetTextColor 0 0 0
-    SetBackgroundColor 170 220 190
+    SetBackgroundColor 120 200 150
     SetFontSize 37
     PlayAlertSound 8 100
 	MinimapIcon 1 White Hexagon
 	DisableDropSound
-# Show # 5L
-    # LinkedSockets 5
-    # SetBorderColor 0 100 255
-    # SetFontSize 35
-	# DisableDropSound
+Show # 5L
+    LinkedSockets 5
+    #SetBorderColor 0 50 130
+	SetBackgroundColor 50 50 50
+    SetFontSize 35
+	DisableDropSound
 #====================================================
 #		[Special-Identified]
 #====================================================
 Show # Warbands
 	Identified True
+	Rarity Magic
 	Corrupted False
 	HasExplicitMod "Brinerot" "Mutewind" "Redblade" "Betrayer's" "Deceiver's" "Turncoat's"
-    Rarity Magic
-    SetBorderColor 255 0 0
+	SetBackgroundColor 0 0 55
+    SetBorderColor 95 0 0
+	MinimapIcon 2 Green Diamond
 	DisableDropSound
-Show # Special items
+Show # Veiled rares (Betrayal)
+	Identified True
+	HasExplicitMod "Veil"
+	SetTextColor 210 175 255
+	SetBorderColor 210 175 255
+	SetBackgroundColor 30 0 70
+	MinimapIcon 1 Green Diamond
+	DisableDropSound
+Show # Incursion special mods, and meta-crafting mods
 	Identified True
 	HasExplicitMod "Tacati" "Citaqualotl" "Matatl" "Topotante" "Xopec" "Guatelitzi" "Puhuarte" "Subterranean" "of the Underground" "of Weaponcraft" "of Spellcraft" "of Crafting"
-	SetBorderColor 255 0 0
+	SetBackgroundColor 60 60 0
+    SetBorderColor 95 0 0
+	MinimapIcon 2 Green Diamond
 	DisableDropSound
-Hide
-	Class Ring
-	BaseType "Breach Ring"
-Hide # Corrupted	
-	Corrupted True
-	#Class Ring Amulet Belt
-	Rarity Rare
-	SetBorderColor 255 0 0
-	DisableDropSound
-Show # Rares from Delve?
+Show # ID'd rares, mostly from Delve
 	Identified True
 	Rarity Rare
-	SetBorderColor 255 0 0
+	SetBackgroundColor 50 50 0
+	SetBorderColor 130 0 0
+	MinimapIcon 2 Green Diamond
 	DisableDropSound
-Show # New bases # Add "Normal" to rarity eventually [4]
-	BaseType "Steel Ring" "Opal Ring" "Blue Pearl Amulet" "Marble Amulet" "Vanguard Belt" "Crystal Belt" "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
-	SetBorderColor 190 130 230
-	Rarity "Rare" "Unique"
-	PlayAlertSound 9 40
-	DisableDropSound
+Hide # Toggle to hide breach rings
+	Class Ring
+	BaseType "Breach Ring"
+# Hide # Toggle to hide corrupted jewellery
+	# Corrupted True
+	# #Class Ring Amulet Belt
+	# Rarity Rare
+	# SetBorderColor 255 0 0
+	# DisableDropSound
 #====================================================
 #		[Elder-Shaper]
 #====================================================
 #====================================================
+#		[ELSH][Shaper-Acc]
+#====================================================
+Show # ilvl84+ Steel & Opal Rings
+	ShaperItem True
+	Class Ring
+	BaseType "Opal Ring" "Steel Ring"
+	ItemLevel >= 84
+	SetBackgroundColor 50 0 65
+	SetBorderColor 255 255 255
+	SetTextColor 255 255 255
+	SetFontSize 45
+	PlayAlertSound 9 200
+	MinimapIcon 0 White Triangle
+	DisableDropSound
+Show # ilvl80+ Steel & Opal Rings
+	ShaperItem True
+	Class Ring
+	BaseType "Opal Ring" "Steel Ring"
+	ItemLevel >= 80
+	SetBackgroundColor 50 0 65
+	SetBorderColor 255 255 255
+	SetTextColor 255 255 255
+	SetFontSize 45
+	PlayAlertSound 9 200
+	MinimapIcon 0 White Triangle
+	DisableDropSound
+Show # ilvl85+ Amulets
+	ShaperItem True
+	Class Amulet
+	ItemLevel >= 85
+	SetBackgroundColor 50 0 65
+	SetBorderColor 255 255 255
+	SetTextColor 255 255 255
+	SetFontSize 45
+	PlayAlertSound 9 200
+	MinimapIcon 0 White Triangle
+	DisableDropSound
+Show # Other Rings
+	ShaperItem True
+	Class Ring
+	ItemLevel >= 84
+	SetBackgroundColor 50 0 65
+	SetTextColor 240 160 255
+	SetFontSize 35
+	PlayAlertSound 9 100
+	MinimapIcon 2 White Triangle
+	DisableDropSound
+Show # Belts
+	ShaperItem True
+	Class Belt
+	BaseType "Leather Belt"
+	ItemLevel >= 86
+	SetBackgroundColor 50 0 65
+	SetTextColor 255 255 255
+	SetFontSize 37
+	PlayAlertSound 9 150
+	MinimapIcon 1 White Triangle
+	DisableDropSound
+Show # Quivers ilvl86
+	ShaperItem True
+	Class Quiver
+	BaseType "Spike-Point Arrow Quiver"
+	ItemLevel >= 86
+	SetBackgroundColor 50 0 65
+	SetTextColor 255 255 255
+	SetFontSize 37
+	PlayAlertSound 9 150
+	MinimapIcon 0 White Triangle
+	DisableDropSound
+Show # Quivers, +1 arrow
+	ShaperItem True
+	Class Quiver
+	ItemLevel >= 80
+	SetBackgroundColor 50 0 65
+	SetTextColor 240 160 255
+	SetFontSize 35
+	PlayAlertSound 9 100
+	MinimapIcon 2 White Triangle
+	DisableDropSound
+#====================================================
+#		[ELSH][Shaper-WEP-ARM]
+#====================================================
+Show # Caster Weapon bases, ilvl80 for extra phys damage as element
+	ShaperItem True
+	ItemLevel >= 80
+	BaseType "Sambar Sceptre" "Platinum Kris" "Golden Kris" "Copper Kris" "Void Sceptre" "Abyssal Sceptre" "Crystal Sceptre" "Carnal Sceptre" "Vaal Sceptre" "Opal Sceptre"
+	SetBackgroundColor 50 0 65
+	SetTextColor 255 255 255
+	SetBorderColor 255 255 255
+	SetFontSize 37
+	PlayAlertSound 9 150
+	MinimapIcon 0 White Triangle
+	DisableDropSound
+Show # ilvl84+ Eclipse Staff
+	ShaperItem True
+	ItemLevel >= 84
+	Class Staff
+	BaseType "Eclipse Staff"
+	SetBackgroundColor 50 0 65
+	SetTextColor 255 255 255
+	SetFontSize 37
+	PlayAlertSound 9 150
+	MinimapIcon 1 White Triangle
+	DisableDropSound
+Show # Caster Weapon bases, daggers ilvl84+
+	ShaperItem True
+	ItemLevel >= 84
+	Class Dagger
+	SetBackgroundColor 50 0 65
+	SetTextColor 240 160 255
+	SetFontSize 35
+	PlayAlertSound 9 100
+	MinimapIcon 2 White Triangle
+	DisableDropSound
+Show # ilvl84+ foils
+	ShaperItem True
+	ItemLevel >= 84
+	BaseType "Jewelled Foil" "Spiraled Foil" "Apex Rapier"
+	SetBackgroundColor 50 0 65
+	SetTextColor 240 160 255
+	SetFontSize 35
+	PlayAlertSound 9 100
+	MinimapIcon 2 White Triangle
+	DisableDropSound
+Show # ilvl80+ Eclipse Staff
+	ShaperItem True
+	ItemLevel >= 80
+	Class Staff
+	BaseType "Eclipse Staff"
+	SetBackgroundColor 50 0 65
+	SetTextColor 240 160 255
+	SetFontSize 35
+	PlayAlertSound 9 100
+	MinimapIcon 2 White Triangle
+	DisableDropSound
+Show # ilvl80+ helmets
+	ShaperItem True
+	ItemLevel >= 80
+	BaseType "Hubris Circlet"
+	SetBackgroundColor 50 0 65
+	SetTextColor 240 160 255
+	SetFontSize 35
+	PlayAlertSound 9 100
+	MinimapIcon 2 White Triangle
+	DisableDropSound
+#====================================================
 #		[ELSH][Elder-Acc]
 #====================================================
-Show # Best ring bases
+Show # Steel & Opal Rings
 	ElderItem True
 	Class Ring
 	BaseType "Opal Ring" "Steel Ring"
-	#SetBackgroundColor 35 140 140
-	SetBackgroundColor 140 0 180
+	SetBackgroundColor 50 0 65
 	SetBorderColor 255 255 255
 	SetTextColor 255 255 255
 	SetFontSize 40
 	PlayAlertSound 9 200
+	MinimapIcon 0 White Triangle
 	DisableDropSound
-Show # Other Rings
+Show # ilvl84+ Resistance, crit, or life rings
 	ElderItem True
 	Class Ring
-	ItemLevel >= 75
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
-	#SetTextColor 130 225 225
-	SetFontSize 35
-	PlayAlertSound 9 100
+	ItemLevel >= 84
+	BaseType "Topaz Ring" "Ruby Ring" "Two-Stone Ring" "Diamond Ring" "Coral Ring"
+	SetBackgroundColor 50 0 65
+	SetTextColor 255 255 255
+	SetFontSize 37
+	PlayAlertSound 9 150
+	MinimapIcon 1 White Triangle
 	DisableDropSound
-Show # Leather belts, life recovery %
+Show # ilvl84+ Leather Belt
 	ElderItem True
 	BaseType "Leather Belt"
-	ItemLevel >= 75
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
-	SetBorderColor 240 180 255
+	ItemLevel >= 84
+	SetBackgroundColor 50 0 65
+	SetTextColor 255 255 255
 	SetFontSize 37
 	PlayAlertSound 9 150
+	MinimapIcon 1 White Triangle
 	DisableDropSound
-Show # Belts, life recovery %
+Show # ilvl80+ Rings
 	ElderItem True
-	Class Belt
-	ItemLevel >= 75
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
+	Class Ring
+	ItemLevel >= 80
+	SetBackgroundColor 50 0 65
+	SetTextColor 240 160 255
 	SetFontSize 35
 	PlayAlertSound 9 100
+	MinimapIcon 2 White Triangle
 	DisableDropSound
-Show # Amulets, non-chaos as chaos
+Show # ilvl84+ Amulets
 	ElderItem True
 	Class Amulet
-	ItemLevel >= 81
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
-	SetBorderColor 240 180 255
-	SetFontSize 37
-	PlayAlertSound 9 150
-	DisableDropSound
-Show # Amulets, other stats
-	ElderItem True
-	Class Amulet
-	ItemLevel >= 75
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
+	ItemLevel >= 84
+	SetBackgroundColor 50 0 65
+	SetTextColor 240 160 255
 	SetFontSize 35
 	PlayAlertSound 9 100
+	MinimapIcon 2 White Triangle
 	DisableDropSound
 #====================================================
 #		[ELSH][Elder-WEP-ARM]
@@ -877,127 +1105,53 @@ Show # Amulets, other stats
 Show # Best weapon bases, T1 phys rolls
 	ElderItem True
 	ItemLevel >= 83
-	BaseType "Siege Axe" "Vaal Axe" "Imbued Wand" "Harbinger Bow" "Imperial Skean" "Ezomyte Dagger" "Ambusher" "Imperial Claw" "Eye Gouger" "Gemini Claw" "Jewelled Foil" "Spiraled Foil"
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
+	BaseType "Jewelled Foil" "Spiraled Foil" "Vaal Axe"
+	SetBackgroundColor 50 0 65
+	SetTextColor 240 160 255
 	SetFontSize 35
 	PlayAlertSound 9 100
+	MinimapIcon 2 White Triangle
 	DisableDropSound
-Show # Best armor bases, T1 flat crit chance # "Triumphant Lamellar" "General's Brigandine" "Vaal Regalia"
+Show # ilvl86+ Helmets
 	ElderItem True
-	ItemLevel >= 84
-	BaseType "Astral Plate" "Assassin's Garb" "Zodiac Leather" "Saintly Chainmail"
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
-	SetFontSize 35
-	PlayAlertSound 9 100
-	DisableDropSound
-# Show # Best helmet bases with lvl20 support gems
-	# ElderItem True
-	# ItemLevel >= 82
-	# Class Helmet
-	# BaseType "Lion Pelt" "Eternal Burgonet" "Royal Burgonet" "Hubris Circlet"
-	# SetBackgroundColor 140 0 180
-	# SetTextColor 240 180 255
-	# SetFontSize 35
-	# PlayAlertSound 9 100
-	# DisableDropSound
-#====================================================
-#		[ELSH][Shaper-Acc]
-#====================================================
-Show # Best ring bases
-	ShaperItem True
-	Class Ring
-	BaseType "Opal Ring" "Steel Ring"
-	SetBackgroundColor 140 0 180
-	SetBorderColor 255 255 255
+	ItemLevel >= 86
+	Class Helmet
+	BaseType "Royal Burgonet" "Eternal Burgonet" "Samite Helmet" "Magistrate Crown" "Bone Helmet" "Hubris Circlet"
+	SetBackgroundColor 50 0 65
 	SetTextColor 255 255 255
-	SetFontSize 40
-	PlayAlertSound 9 200
-	DisableDropSound
-Show # Other Rings
-	ShaperItem True
-	Class Ring
-	ItemLevel >= 75
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
-	SetFontSize 35
-	PlayAlertSound 9 100
-	DisableDropSound
-Show # Belts
-	ShaperItem True
-	Class Belt
-	ItemLevel >= 75
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
-	SetFontSize 35
-	PlayAlertSound 9 100
-	DisableDropSound
-Show # Amulets
-	ShaperItem True
-	Class Amulet
-	ItemLevel >= 75
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
-	SetFontSize 35
-	PlayAlertSound 9 100
-	DisableDropSound
-Show # Quivers, +1 arrow
-	ShaperItem True
-	Class Quiver
-	ItemLevel >= 80
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
-	SetTextColor 130 225 225
 	SetFontSize 37
 	PlayAlertSound 9 150
+	MinimapIcon 1 White Triangle
 	DisableDropSound
-#====================================================
-#		[ELSH][Shaper-WEP-ARM]
-#====================================================
-Show # Best weapon bases, T1 phys rolls
-	ShaperItem True
-	ItemLevel >= 83
-	BaseType "Siege Axe" "Vaal Axe" "Imbued Wand" "Harbinger Bow" "Imperial Skean" "Ezomyte Dagger" "Ambusher" "Imperial Claw" "Eye Gouger" "Gemini Claw" "Jewelled Foil" "Spiraled Foil"
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
-	SetFontSize 35
-	PlayAlertSound 9 100
-	DisableDropSound
-Show # Best armor bases, T1 flat crit chance # "Triumphant Lamellar" "General's Brigandine" "Vaal Regalia"
-	ShaperItem True
+Show # ilvl84+ Helmets
+	ElderItem True
 	ItemLevel >= 84
-	BaseType "Astral Plate" "Assassin's Garb" "Zodiac Leather" "Saintly Chainmail"
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
-	SetFontSize 35
-	PlayAlertSound 9 100
-	DisableDropSound
-Show # Scepters and daggers, added phys as [x]
-	ShaperItem True
-	ItemLevel >= 80
-	BaseType "Sambar Sceptre" "Opal Sceptre" "Void Sceptre" "Vaal Sceptre" "Carnal Sceptre" "Copper Kris" "Golden Kris" "Platinum Kris"
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
-	SetFontSize 35
-	PlayAlertSound 9 100
+	Class Helmet
+	BaseType "Royal Burgonet" "Eternal Burgonet" "Samite Helmet" "Magistrate Crown" "Hubris Circlet"
+	SetBackgroundColor 50 0 65
+	SetTextColor 255 255 255
+	SetFontSize 37
+	PlayAlertSound 9 150
+	MinimapIcon 1 White Triangle
 	DisableDropSound
 #====================================================
 #		[ELSH][Remaining]
 #====================================================
 Show # Shaper items
 	ShaperItem True
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
+	SetBackgroundColor 50 0 65
+	SetTextColor 240 160 255
 	#PlayAlertSound 9 50
 	SetFontSize 29
+	MinimapIcon 2 White Triangle
 	DisableDropSound
 Show # Elder items
 	ElderItem True
-	SetBackgroundColor 140 0 180
-	SetTextColor 240 180 255
+	SetBackgroundColor 50 0 65
+	SetTextColor 240 160 255
 	#PlayAlertSound 9 50
 	SetFontSize 29
+	MinimapIcon 2 White Triangle
 	DisableDropSound
 #====================================================
 #		[Accessories]
@@ -1036,52 +1190,53 @@ Show # Special Bases: Vanguard Belt, Marble Amulet, Blue Pearl Amulet
 #----------------------------------------------------
 #	[ACC][Recipes]
 #----------------------------------------------------
-# Show
-	# Class "Amulet" "Ring"
-	# BaseType "Opal Ring" "Steel Ring" "Prismatic Ring" "Marble Amulet" 
-	# SetBackgroundColor 90 90 0
-    # SetBorderColor 255 255 0
-	# SetFontSize 35
-	# DisableDropSound
-# Show # Regal recipe
-	# Class "Amulet" "Ring"
-	# BaseType "Two-Stone Ring" "Opal Ring" "Steel Ring" "Prismatic Ring" "Diamond Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Unset Ring" "Coral Ring" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Onyx Amulet" "Marble Amulet"
-    # ItemLevel > 74
-    # Rarity Rare
-	# Corrupted False
-	# SetBackgroundColor 90 90 0
-    # SetBorderColor 255 255 0
-	# SetFontSize 35
-	# DisableDropSound
-# Show # Chaos Recipe
-	# Class "Amulet" "Ring"
-	# BaseType "Two-Stone Ring" "Opal Ring" "Steel Ring" "Prismatic Ring" "Diamond Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Unset Ring" "Coral Ring" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Onyx Amulet" "Marble Amulet"
-    # ItemLevel > 59
-    # Rarity Rare
-	# Corrupted False
-    # SetBackgroundColor 90 90 0
-    # SetFontSize 34
-	# DisableDropSound
-# Show
-	# Class Belt
-	# BaseType "Stygian Vise" "Vanguard Belt" "Crystal Belt"
-    # ItemLevel > 59
-    # Rarity Rare
-	# SetBackgroundColor 90 90 0
-	# SetBorderColor 255 255 0 0
-	# DisableDropSound
-# Show # Rare Belts # "Heavy Belt" "Rustic Sash"
-	# Class Belt
-	# BaseType "Leather Belt" "Stygian Vise" "Vanguard Belt" "Crystal Belt"
-    # ItemLevel > 59
-    # Rarity Rare
-	# SetBackgroundColor 90 90 0
-	# SetBorderColor 255 255 0 0
-	# DisableDropSound
-# Show
-	# Class Ring Amulet
-	# Rarity Rare
-	# DisableDropSound
+Show # Opal, Steel, and Prismatic, Rings and Marble Amulets
+	Class "Amulet" "Ring"
+	BaseType "Opal Ring" "Steel Ring" "Prismatic Ring" "Marble Amulet" 
+	SetBackgroundColor 90 90 0
+    SetBorderColor 255 255 0
+	SetFontSize 35
+	DisableDropSound
+Show # Regal Recipe Rings and Amulets
+	Class "Amulet" "Ring"
+	#BaseType "Two-Stone Ring" "Opal Ring" "Steel Ring" "Prismatic Ring" "Diamond Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Unset Ring" "Coral Ring" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Onyx Amulet" "Marble Amulet"
+    ItemLevel > 74
+    Rarity Rare
+	Corrupted False
+	SetBackgroundColor 90 90 0
+    SetBorderColor 255 255 0
+	SetFontSize 35
+	DisableDropSound
+Show # Chaos Recipe Rings and Amulets
+	Class "Amulet" "Ring"
+	#BaseType "Two-Stone Ring" "Opal Ring" "Steel Ring" "Prismatic Ring" "Diamond Ring" "Sapphire Ring" "Ruby Ring" "Topaz Ring" "Unset Ring" "Coral Ring" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Citrine Amulet" "Agate Amulet" "Turquoise Amulet" "Onyx Amulet" "Marble Amulet"
+    ItemLevel > 59
+    Rarity Rare
+	Corrupted False
+    SetBackgroundColor 90 90 0
+    SetFontSize 34
+	DisableDropSound
+Show # Rare Stygian, Vanguard, and Crystal Belts
+	Class Belt
+	BaseType "Stygian Vise" "Vanguard Belt" "Crystal Belt"
+    ItemLevel > 59
+    Rarity Rare
+	SetBackgroundColor 90 90 0
+	SetBorderColor 255 255 0 0
+	DisableDropSound
+Show # Rare Belts
+	Class Belt
+	#BaseType "Leather Belt" "Stygian Vise" "Vanguard Belt" "Crystal Belt"
+    ItemLevel > 59
+    Rarity Rare
+	SetBackgroundColor 90 90 0
+	SetBorderColor 255 255 0 0
+	DisableDropSound
+Show
+	Class Ring Amulet
+	Rarity Rare
+	SetBackgroundColor 40 40 0
+	DisableDropSound
 #----------------------------------------------------
 #	[Acc][Jewels]
 #----------------------------------------------------
@@ -1104,34 +1259,57 @@ Show # "Jewel"
 	#BaseType "Searching" "Murderous"
 	ItemLevel >= 80
 	Rarity Magic
+	SetBackgroundColor 30 30 50
 	DisableDropSound
 #====================================================
 #		[Flasks]
 #====================================================
-# Show # Glassblower bauble recipe
-	# Class Flask
-	# Quality >= 10
-	# SetFontSize 25
-	# DisableDropSound
-# Show # Highlight Quicksilver Flask
-	# Class "Flask"
-	# ItemLevel < 65
-	# BaseType "Quicksilver Flask"
-	# SetBorderColor 255 0 0
-	# DisableDropSound
-# Show # Good life/mana flask
-	# Class "Flask"
-	# ItemLevel < 67
-	# BaseType "Divine Mana Flask" "Divine Life Flask" "Eternal Mana Flask"
-	# DisableDropSound
-# Show # Utility Flasks
-	# Class Flask
-    # BaseType "Granite Flask" "Jade Flask" "Quicksilver Flask" "Ruby Flask" "Sapphire Flask" "Topaz Flask" "Amethyst Flask" "Diamond Flask" "Quartz Flask" "Bismuth Flask" "Aquamarine Flask" "Basalt Flask" "Stibnite Flask" "Sulphur Flask" "Silver Flask"
-	# DisableDropSound
-    # SetFontSize 25
+Show # Highlight Quicksilver Flask
+	Class "Flask"
+	ItemLevel < 65
+	BaseType "Quicksilver Flask"
+	SetBorderColor 255 0 0
+	DisableDropSound
+Show # Good life/mana flask
+	Class "Flask"
+	ItemLevel < 67
+	BaseType "Divine Mana Flask" "Divine Life Flask" "Eternal Mana Flask"
+	DisableDropSound
+Show # Utility Flasks
+	Class Flask
+    BaseType "Granite Flask" "Jade Flask" "Quicksilver Flask" "Ruby Flask" "Sapphire Flask" "Topaz Flask" "Amethyst Flask" "Diamond Flask" "Quartz Flask" "Bismuth Flask" "Aquamarine Flask" "Basalt Flask" "Stibnite Flask" "Sulphur Flask" "Silver Flask"
+	DisableDropSound
+    SetFontSize 25
 #====================================================
 #		[Best-Rares]
 #====================================================
+#----------------------------------------------------
+#	[RAR][Special-Bases]
+#----------------------------------------------------
+Show # Two-Toned Boots
+	Class Boots
+	Rarity Rare
+	BaseType "Two-Toned Boots"
+	SetBorderColor 150 60 210
+	SetBackgroundColor 50 15 60
+	SetFontSize 37
+	DisableDropSound
+Show # Spiked/Gripped/Fingerless Gloves
+	Class Gloves
+	Rarity Rare
+	BaseType "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+	SetBorderColor 150 60 210
+	SetBackgroundColor 50 15 60
+	SetFontSize 37
+	DisableDropSound
+Show # Bone helmet
+	Class Helmet
+	Rarity Rare
+	BaseType "Bone Helmet"
+	SetBorderColor 150 60 210
+	SetBackgroundColor 50 15 60
+	SetFontSize 37
+	DisableDropSound
 #----------------------------------------------------
 #	[RAR][ES]
 #----------------------------------------------------
@@ -1382,30 +1560,6 @@ Show # "Jewel"
 	# SetFontSize 37
 	# DisableDropSound
 #----------------------------------------------------
-#	[RAR][Special-Bases]
-#----------------------------------------------------
-Show # Two-Toned Boots
-	Class Boots
-	Rarity Rare
-	BaseType "Two-Toned Boots"
-	SetBorderColor 150 60 210
-	SetFontSize 37
-	DisableDropSound
-Show # Spiked/Gripped/Fingerless Gloves
-	Class Gloves
-	Rarity Rare
-	BaseType "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
-	SetBorderColor 150 60 210
-	SetFontSize 37
-	DisableDropSound
-Show # Bone helmet
-	Class Helmet
-	Rarity Rare
-	BaseType "Bone Helmet"
-	SetBorderColor 150 60 210
-	SetFontSize 37
-	DisableDropSound
-#----------------------------------------------------
 #	[RAR][Weapons]
 #----------------------------------------------------
 # Show # Foils
@@ -1466,26 +1620,26 @@ Show # Bone helmet
 #====================================================
 #		[Chromatic]
 #====================================================
-# Show # 1x3 Chrome recipe [4]
-    # Width 1
-    # Height 3
-    # SocketGroup "RGB"
-    # SetBackgroundColor 0 0 0
-    # SetBorderColor 172 225 47
-	# DisableDropSound
-# Show # 2x2 Chrome recipe [4]
-    # Width 2
-    # Height 2
-    # SocketGroup "RGB"
-    # SetBackgroundColor 0 0 0 230
-    # SetBorderColor 172 225 47
-	# DisableDropSound
+Show # 1x3 Chrome recipe [4]
+    Width 1
+    Height 3
+    SocketGroup "RGB"
+    SetBackgroundColor 40 40 40
+    SetBorderColor 150 170 40
+	DisableDropSound
+Show # 2x2 Chrome recipe [4]
+    Width 2
+    Height 2
+    SocketGroup "RGB"
+    SetBackgroundColor 40 40 40
+    SetBorderColor 150 170 40
+	DisableDropSound
 # Show # 1x4 Chrome recipe [4]
     # Width 1
     # Height 4
     # SocketGroup "RGB"
     # SetBackgroundColor 0 0 0 170
-    # SetBorderColor 172 225 47
+    # SetBorderColor 150 170 40
     # SetFontSize 31
 	# DisableDropSound
 # Show # 2x3 Chrome recipe, Uncomment [2]
@@ -1493,7 +1647,7 @@ Show # Bone helmet
     # Height 3
     # SocketGroup "RGB"
     # SetBackgroundColor 0 0 0 180
-    # SetBorderColor 172 225 47
+    # SetBorderColor 150 170 40
     # SetFontSize 32
 	# DisableDropSound
 # Show # 2x4 Chrome recipe, Uncomment [1]
@@ -1501,7 +1655,7 @@ Show # Bone helmet
     # Height 4
     # SocketGroup "RGB"
     # SetBackgroundColor 0 0 0 120
-    # SetBorderColor 172 225 47
+    # SetBorderColor 150 170 40
     # SetFontSize 29
 	# DisableDropSound
 #====================================================
@@ -1513,6 +1667,7 @@ Hide # Gloves, Comment out: [3]
 	Identified False
 	Corrupted False
 	SetBorderColor 140 20 170
+	SetBackgroundColor 50 5 60
 	DisableDropSound
 Hide # Boots, Comment out: [3]
 	Class Boots
@@ -1520,6 +1675,7 @@ Hide # Boots, Comment out: [3]
 	Identified False
 	Corrupted False
 	SetBorderColor 50 160 20
+	SetBackgroundColor 15 50 5
 	DisableDropSound
 Hide # Helmet, Comment out: [3]
 	Class Helmet
@@ -1527,6 +1683,7 @@ Hide # Helmet, Comment out: [3]
 	Identified False
 	Corrupted False
 	SetBorderColor 130 10 50
+	SetBackgroundColor 55 5 20
 	DisableDropSound
 Hide # 1x3 weapons
 	Class "One Hand Sword" "One Hand Mace" "Dagger" "Wand"
@@ -1536,6 +1693,7 @@ Hide # 1x3 weapons
 	Width 1
     Height 3
 	SetBorderColor 255 165 0
+	SetBackgroundColor 50 30 0
 	DisableDropSound
 Hide
 	Class "Body Armour"
@@ -1543,6 +1701,7 @@ Hide
 	Identified False
 	Corrupted False
 	SetBorderColor 100 100 50
+	SetBackgroundColor 40 40 20
 	DisableDropSound
 # Hide # 1x3 Rares, unid # [2]
 	# Rarity Rare
@@ -1598,30 +1757,34 @@ Show # New bases
 	SetFontSize 37
 	PlayAlertSound 9 100
 	DisableDropSound
+# Show # Special Bases
+	# BaseType "Steel Ring" "Opal Ring" "Blue Pearl Amulet" "Marble Amulet" "Vanguard Belt" "Crystal Belt" "Bone Helmet" "Two-Toned Boots" "Spiked Gloves" "Gripped Gloves" "Fingerless Silk Gloves"
+	# Rarity Rare
+	# SetBorderColor 190 130 230
+	# SetBackgroundColor 100 100 0
+	# PlayAlertSound 9 40
+	# DisableDropSound
 #====================================================
 #		[Leveling]
 #====================================================
-# Show # Sockets # Uncomment: [2]
-	# ItemLevel <= 60
-	# LinkedSockets 4
-	# SetTextColor 255 255 255
-	# SetBackgroundColor 50 50 50
-	# SetBorderColor 150 150 150
-	# #SetFontSize 38
-	# DisableDropSound
-# Show # Sockets # Uncomment: [2]
-	# ItemLevel <= 30
-	# LinkedSockets >= 3
-	# #SetTextColor 255 255 255
-	# #SetBackgroundColor 50 50 50
-	# #SetFontSize 35
-	# DisableDropSound
-Show # Show everything at lower levels # Uncomment: [2]
-    ItemLevel <= 10
+Show # Sockets # Uncomment: [2]
+	ItemLevel <= 60
+	LinkedSockets 4
+	SetTextColor 255 255 255
+	SetBackgroundColor 50 50 50
+	SetBorderColor 150 150 150
+	#SetFontSize 38
 	DisableDropSound
-# Show # Show rares # Uncomment: [2]
-	# Rarity Rare
-	# DisableDropSound
+Show # Sockets
+	ItemLevel <= 30
+	LinkedSockets >= 3
+	#SetTextColor 255 255 255
+	#SetBackgroundColor 50 50 50
+	#SetFontSize 35
+	DisableDropSound
+Show # Show everything at lower levels
+    ItemLevel <= 8
+	DisableDropSound
 #====================================================
 #		[Leveling-Flask]
 #====================================================
@@ -1630,43 +1793,36 @@ Show # Medium flask, requires lvl3
 	Class Flask
 	BaseType "Medium Life Flask" "Medium Mana Flask"
 	DisableDropSound
-
 Show # Large flask, lvl6
 	ItemLevel <= 12
 	Class Flask
 	BaseType "Large Life Flask" "Large Mana Flask"
 	DisableDropSound
-
 Show # Greater, lvl12
 	ItemLevel <= 18
 	Class Flask
 	BaseType "Greater Life Flask" "Greater Mana Flask"
 	DisableDropSound
-
 Show # Grand, lvl18
 	ItemLevel <= 24
 	Class Flask
 	BaseType "Grand Life Flask" "Grand Mana Flask"
 	DisableDropSound
-
 Show # Giant, lvl24
 	ItemLevel <= 30
 	Class Flask
 	BaseType "Giant Life Flask" "Giant Mana Flask"
 	DisableDropSound
-
 Show # Colossal, lvl30
 	ItemLevel <= 36
 	Class Flask
 	BaseType "Colossal Life Flask" "Colossal Mana Flask"
 	DisableDropSound
-
 Show # Sacred, lvl36
 	ItemLevel <= 41
 	Class Flask
 	BaseType "Sacred Life Flask" "Sacred Mana Flask"
 	DisableDropSound
-
 Show # Hallowed, lvl36
 	ItemLevel <= 50
 	Class Flask
@@ -1675,18 +1831,6 @@ Show # Hallowed, lvl36
 #====================================================
 #		[Miscellaneous]
 #====================================================
-# Show # Chisel recipe Uncomment [1]
-	# Class "One Hand Mace"
-    # Rarity Normal
-    # BaseType "Stone Hammer" "Rock Breaker" "Gavel"
-	# SetBorderColor 255 255 255
-	# DisableDropSound
-# Show # Chisel Recipe Uncomment [1]
-	# Class "One Hand Mace"
-    # Quality > 16
-    # BaseType "Stone Hammer" "Rock Breaker" "Gavel"
-	# SetBorderColor 255 255 255
-	# DisableDropSound
 # Show
 	# ItemLevel >= 84
 	# BaseType "Lion Pelt"
