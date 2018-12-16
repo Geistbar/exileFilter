@@ -305,3 +305,50 @@
 	# SetBorderColor 0 0 0 0
 	# SetFontSize 37
 	# DisableDropSound
+#====================================================
+#		[Rares]
+#====================================================
+	# Hide # 1x3 Rares
+	# Rarity Rare
+	# Identified False
+	# Corrupted False
+    # Width 1
+    # Height 3
+	# SetTextColor 255 255 119
+    # SetFontSize 35
+	# DisableDropSound
+# Hide # 1x3 rares
+	# Rarity Rare
+    # Width 1
+    # Height 3
+	# SetTextColor 255 255 119
+    # SetFontSize 35
+	# DisableDropSound
+# Hide # 2x2 rares
+	# Rarity Rare
+    # Width 2
+    # Height 2
+	# SetTextColor 255 255 119 230
+    # SetFontSize 35
+	# DisableDropSound
+# Hide # 1x4 rares
+	# Rarity Rare
+    # Width 1
+    # Height 4
+	# SetTextColor 255 255 119 215
+	# SetFontSize 33
+	# DisableDropSound
+# Hide # 2x3 rares
+	# Rarity Rare
+    # Width 2
+    # Height 3
+	# SetTextColor 255 255 119 180
+    # SetFontSize 30
+	# DisableDropSound
+# Hide # 2x4 rares
+	# Rarity Rare
+    # Width 2
+    # Height 4
+	# SetTextColor 255 255 0 150
+	# SetFontSize 26
+	# DisableDropSound

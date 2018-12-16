@@ -1,16 +1,12 @@
 ﻿#====================================================
 #	GBFilterStrict
 #====================================================
-# Version: 2018-08-31
+# Version: 2018-12-16
 # -------- Documentation:
-
-# Old ES colors:
-#	SetBackgroundColor 70 35 0
-#	SetBorderColor 255 165 0
 
 # Sound Usage:
 # Sound 01: Biggest currency
-# Sound 02: Chaos-sized currency
+# Sound 02: Chaos-sized currency, Quality Gems
 # Sound 03: T12+ maps
 # Sound 04: General uniques
 # Sound 05: Good divination cards
@@ -35,6 +31,7 @@
 #		[CUR][Essences]
 #		[CUR][Fragments]
 #		[CUR][Other-Currency]
+#		[CUR][Fossils]
 #		[CUR][Remaining]
 #	[Cards]
 #	[Maps]
@@ -51,19 +48,12 @@
 #		[Acc][Jewels]
 #	[5L-6S]
 #	[Elder-Shaper]
-#		[ELSH][Elder-Acc]
-#		[ELSH][Elder-WEP-ARM]
 #		[ELSH][Shaper-Acc]
 #		[ELSH][Shaper-WEP-ARM]
+#		[ELSH][Elder-Acc]
+#		[ELSH][Elder-WEP-ARM]
 #		[ELSH][Remaining]
 #	[Best Rares]
-#		[RAR][ES-Best]
-#		[RAR][ES-Good]
-#		[RAR][Armor]
-#		[RAR][Evasion]
-#		[RAR][Hybrid-ES-EV]
-#		[RAR][Hybrid-ES-AR]
-#		[RAR][Hybrid-EV-AR]
 #		[RAR][Special-Bases]
 #		[RAR][Weapons]
 #	[Chromatics]
@@ -1313,21 +1303,21 @@ Show # Bone helmet
 #====================================================
 #		[Chromatic]
 #====================================================
-Show # 1x3 Chrome recipe [4]
+Show # 1x3 Chrome recipe
     Width 1
     Height 3
     SocketGroup "RGB"
     SetBackgroundColor 40 40 40
     SetBorderColor 150 170 40
 	DisableDropSound
-Show # 2x2 Chrome recipe [4]
+Show # 2x2 Chrome recipe
     Width 2
     Height 2
     SocketGroup "RGB"
     SetBackgroundColor 40 40 40
     SetBorderColor 150 170 40
 	DisableDropSound
-# Show # 1x4 Chrome recipe [4]
+# Show # 1x4 Chrome recipe
     # Width 1
     # Height 4
     # SocketGroup "RGB"
@@ -1335,7 +1325,7 @@ Show # 2x2 Chrome recipe [4]
     # SetBorderColor 150 170 40
     # SetFontSize 31
 	# DisableDropSound
-# Show # 2x3 Chrome recipe, Uncomment [2]
+# Show # 2x3 Chrome recipe
     # Width 2
     # Height 3
     # SocketGroup "RGB"
@@ -1343,7 +1333,7 @@ Show # 2x2 Chrome recipe [4]
     # SetBorderColor 150 170 40
     # SetFontSize 32
 	# DisableDropSound
-# Show # 2x4 Chrome recipe, Uncomment [1]
+# Show # 2x4 Chrome recipe
     # Width 2
     # Height 4
     # SocketGroup "RGB"
@@ -1354,7 +1344,7 @@ Show # 2x2 Chrome recipe [4]
 #====================================================
 #		[Rares]
 #====================================================
-Hide # Gloves, Comment out: [3]
+Hide # Gloves
 	Class Gloves
 	Rarity Rare
 	Identified False
@@ -1362,7 +1352,7 @@ Hide # Gloves, Comment out: [3]
 	SetBorderColor 140 20 170
 	SetBackgroundColor 50 5 60
 	DisableDropSound
-Hide # Boots, Comment out: [3]
+Hide # Boots
 	Class Boots
 	Rarity Rare
 	Identified False
@@ -1370,7 +1360,7 @@ Hide # Boots, Comment out: [3]
 	SetBorderColor 50 160 20
 	SetBackgroundColor 15 50 5
 	DisableDropSound
-Hide # Helmet, Comment out: [3]
+Hide # Helmet
 	Class Helmet
 	Rarity Rare
 	Identified False
@@ -1388,7 +1378,7 @@ Hide # 1x3 weapons
 	SetBorderColor 255 165 0
 	SetBackgroundColor 50 30 0
 	DisableDropSound
-Hide
+Hide Body Armor
 	Class "Body Armour"
 	Rarity Rare
 	Identified False
@@ -1396,50 +1386,6 @@ Hide
 	SetBorderColor 100 100 50
 	SetBackgroundColor 40 40 20
 	DisableDropSound
-# Hide # 1x3 Rares, unid # [2]
-	# Rarity Rare
-	# Identified False
-	# Corrupted False
-    # Width 1
-    # Height 3
-	# SetTextColor 255 255 119
-    # SetFontSize 35
-	# DisableDropSound
-# Hide # 1x3 rares # [2]
-	# Rarity Rare
-    # Width 1
-    # Height 3
-	# SetTextColor 255 255 119
-    # SetFontSize 35
-	# DisableDropSound
-# Hide # 2x2 rares # [2]
-	# Rarity Rare
-    # Width 2
-    # Height 2
-	# SetTextColor 255 255 119 230
-    # SetFontSize 35
-	# DisableDropSound
-# Hide # 1x4 rares # [2]
-	# Rarity Rare
-    # Width 1
-    # Height 4
-	# SetTextColor 255 255 119 215
-	# SetFontSize 33
-	# DisableDropSound
-# Hide # 2x3 rares # [2]
-	# Rarity Rare
-    # Width 2
-    # Height 3
-	# SetTextColor 255 255 119 180
-    # SetFontSize 30
-	# DisableDropSound
-# Hide # 2x4 rares # [1]
-	# Rarity Rare
-    # Width 2
-    # Height 4
-	# SetTextColor 255 255 0 150
-	# SetFontSize 26
-	# DisableDropSound
 #====================================================
 #		[Crafting]
 #====================================================
