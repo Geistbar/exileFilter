@@ -236,7 +236,7 @@ Show # For vendoring into wisdom scrolls
 	SetBackgroundColor 10 35 10
 	SetFontSize 33
 	DisableDropSound
-Show # Small currencies that I want a stockpile of before hiding
+Hide # Small currencies that I want a stockpile of before hiding
 	Class Currency
     BaseType "Orb of Transmutation" "Orb of Augmentation" "Blacksmith's Whetstone" "Armourer's Scrap" 
     SetTextColor 50 170 30
@@ -837,15 +837,21 @@ Show # 6S
     PlayAlertSound 8 100
 	MinimapIcon 1 White Hexagon
 	DisableDropSound
-Show # 5L
-    LinkedSockets 5
-    #SetBorderColor 0 50 130
-	SetBackgroundColor 50 50 50
-    SetFontSize 35
-	DisableDropSound
+# Show # 5L
+    # LinkedSockets 5
+    # #SetBorderColor 0 50 130
+	# SetBackgroundColor 50 50 50
+    # SetFontSize 35
+	# DisableDropSound
 #====================================================
 #		[Special-Identified]
 #====================================================
+Show # Talismans; needs to be before other identified items because they're corrupted
+	Class Amulet
+    BaseType "Talisman"
+    SetBackgroundColor 64 19 64
+	SetBorderColor 0 0 0 0
+	DisableDropSound
 Show # Warbands
 	Identified True
 	Rarity Magic
@@ -870,6 +876,14 @@ Show # Incursion special mods, and meta-crafting mods
     SetBorderColor 95 0 0
 	MinimapIcon 2 Green Diamond
 	DisableDropSound
+Hide # Toggle to hide breach rings, needs to be before ID'd rares
+	Class Ring
+	BaseType "Breach Ring"
+Hide # Hide Corrupted Items
+	Corrupted True
+	Rarity Rare
+	SetBorderColor 255 0 0
+	DisableDropSound
 Show # ID'd rares, mostly from Delve
 	Identified True
 	Rarity Rare
@@ -877,9 +891,6 @@ Show # ID'd rares, mostly from Delve
 	SetBorderColor 130 0 0
 	MinimapIcon 2 Green Diamond
 	DisableDropSound
-Hide # Toggle to hide breach rings
-	Class Ring
-	BaseType "Breach Ring"
 # Hide # Toggle to hide corrupted jewellery
 	# Corrupted True
 	# #Class Ring Amulet Belt
@@ -1148,15 +1159,6 @@ Show # Elder items
 #		[Accessories]
 #====================================================
 #----------------------------------------------------
-#	[ACC][Talismans]
-#----------------------------------------------------
-Show # Talismans
-	Class Amulet
-    BaseType "Talisman"
-    SetBackgroundColor 64 19 64
-	SetBorderColor 0 0 0 0
-	DisableDropSound
-#----------------------------------------------------
 #	[ACC][Special-Bases]
 #----------------------------------------------------
 Show # Special bases: Opal Ring, Steel Ring, Crystal Belt
@@ -1253,25 +1255,6 @@ Show # "Jewel"
 	SetBackgroundColor 30 30 50
 	DisableDropSound
 #====================================================
-#		[Flasks]
-#====================================================
-Show # Highlight Quicksilver Flask
-	Class "Flask"
-	ItemLevel < 65
-	BaseType "Quicksilver Flask"
-	SetBorderColor 255 0 0
-	DisableDropSound
-Show # Good life/mana flask
-	Class "Flask"
-	ItemLevel < 67
-	BaseType "Divine Mana Flask" "Divine Life Flask" "Eternal Mana Flask"
-	DisableDropSound
-Show # Utility Flasks
-	Class Flask
-    BaseType "Granite Flask" "Jade Flask" "Quicksilver Flask" "Ruby Flask" "Sapphire Flask" "Topaz Flask" "Amethyst Flask" "Diamond Flask" "Quartz Flask" "Bismuth Flask" "Aquamarine Flask" "Basalt Flask" "Stibnite Flask" "Sulphur Flask" "Silver Flask"
-	DisableDropSound
-    SetFontSize 25
-#====================================================
 #		[Best-Rares]
 #====================================================
 #----------------------------------------------------
@@ -1304,20 +1287,20 @@ Show # Bone helmet
 #====================================================
 #		[Chromatic]
 #====================================================
-Show # 1x3 Chrome recipe
-    Width 1
-    Height 3
-    SocketGroup "RGB"
-    SetBackgroundColor 40 40 40
-    SetBorderColor 150 170 40
-	DisableDropSound
-Show # 2x2 Chrome recipe
-    Width 2
-    Height 2
-    SocketGroup "RGB"
-    SetBackgroundColor 40 40 40
-    SetBorderColor 150 170 40
-	DisableDropSound
+# Show # 1x3 Chrome recipe
+    # Width 1
+    # Height 3
+    # SocketGroup "RGB"
+    # SetBackgroundColor 40 40 40
+    # SetBorderColor 150 170 40
+	# DisableDropSound
+# Show # 2x2 Chrome recipe
+    # Width 2
+    # Height 2
+    # SocketGroup "RGB"
+    # SetBackgroundColor 40 40 40
+    # SetBorderColor 150 170 40
+	# DisableDropSound
 # Show # 1x4 Chrome recipe
     # Width 1
     # Height 4
@@ -1379,6 +1362,16 @@ Hide # 1x3 weapons
 	SetBorderColor 255 165 0
 	SetBackgroundColor 50 30 0
 	DisableDropSound
+Hide # 2x3 Bows
+	Class Bows
+	Rarity Rare
+	Identified False
+	Corrupted False
+	Width 2
+    Height 3
+	SetBorderColor 255 165 0
+	SetBackgroundColor 50 30 0
+	DisableDropSound
 Hide Body Armor
 	Class "Body Armour"
 	Rarity Rare
@@ -1405,26 +1398,24 @@ Show # New bases
 	# PlayAlertSound 9 40
 	# DisableDropSound
 #====================================================
-#		[Leveling]
+#		[Flasks]
 #====================================================
-Show # Sockets # Uncomment: [2]
-	ItemLevel <= 60
-	LinkedSockets 4
-	SetTextColor 255 255 255
-	SetBackgroundColor 50 50 50
-	SetBorderColor 150 150 150
-	#SetFontSize 38
-	DisableDropSound
-Show # Sockets
-	ItemLevel <= 30
-	LinkedSockets >= 3
-	#SetTextColor 255 255 255
-	#SetBackgroundColor 50 50 50
-	#SetFontSize 35
-	DisableDropSound
-Show # Show everything at lower levels
-    ItemLevel <= 8
-	DisableDropSound
+# Show # Highlight Quicksilver Flask
+	# Class "Flask"
+	# ItemLevel < 65
+	# BaseType "Quicksilver Flask"
+	# SetBorderColor 255 0 0
+	# DisableDropSound
+# Show # Good life/mana flask
+	# Class "Flask"
+	# ItemLevel < 67
+	# BaseType "Divine Mana Flask" "Divine Life Flask" "Eternal Mana Flask"
+	# DisableDropSound
+# Show # Utility Flasks
+	# Class Flask
+    # BaseType "Granite Flask" "Jade Flask" "Quicksilver Flask" "Ruby Flask" "Sapphire Flask" "Topaz Flask" "Amethyst Flask" "Diamond Flask" "Quartz Flask" "Bismuth Flask" "Aquamarine Flask" "Basalt Flask" "Stibnite Flask" "Sulphur Flask" "Silver Flask"
+	# DisableDropSound
+    # SetFontSize 25
 #====================================================
 #		[Leveling-Flask]
 #====================================================
@@ -1467,6 +1458,27 @@ Show # Hallowed, lvl36
 	ItemLevel <= 50
 	Class Flask
 	BaseType "Hallowed Life Flask" "Hallowed Mana Flask"
+	DisableDropSound
+#====================================================
+#		[Leveling]
+#====================================================
+Show # Sockets # Uncomment: [2]
+	ItemLevel <= 60
+	LinkedSockets 4
+	SetTextColor 255 255 255
+	SetBackgroundColor 50 50 50
+	SetBorderColor 150 150 150
+	#SetFontSize 38
+	DisableDropSound
+Show # Sockets
+	ItemLevel <= 30
+	LinkedSockets >= 3
+	#SetTextColor 255 255 255
+	#SetBackgroundColor 50 50 50
+	#SetFontSize 35
+	DisableDropSound
+Show # Show everything at lower levels
+    ItemLevel <= 8
 	DisableDropSound
 #====================================================
 #		[Miscellaneous]
